@@ -3301,3 +3301,127 @@ Processing by UsersController#home as HTML
   Rendered users/home.html.erb within layouts/application (1.4ms)
   [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
 Completed 200 OK in 212ms (Views: 199.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-06-21 15:15:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 191ms (Views: 181.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users" for ::1 at 2016-06-21 15:15:09 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/12" for ::1 at 2016-06-21 15:15:11 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mVenue Load (0.7ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/sessions" for ::1 at 2016-06-21 15:15:16 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M11WeNObhQN5j5VCjDfi3WWXHQvXk3pA3tZiBifshtSaiJSd+f5mGPfZVAid2RqoQMP4Bmm7pdocLIZiuHA1tQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-21 15:15:16 -0700
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2016-06-21 15:15:19 -0700
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Q8qZK1rcdoLcFkf5kCKDmpxO9LzG2yL7KiY5ULU9fvPqH1vOcLmVmVJAhrOBzHvvuRoRsXjz/WHo3N00KqHNkg=="}
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-06-21 15:15:21 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uhES+G1gT/L4qUpA4GS5opqLHFR0GB/G0Xxq2tX2x9wTxNAdRwWs6Xb/iwrxikHXv9/5WcowwFwTho6+Smp0vQ==", "user"=>{"email"=>"1kabah@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "1kabah@gmail.com"]]
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 84ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/22" for ::1 at 2016-06-21 15:15:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 22]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2016-06-21 15:15:26 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sessions" for ::1 at 2016-06-21 15:15:31 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/qdfsDDmkEuPjVr/gSgnoxYsvMwWstuJN8k1QwGpQfRXcp1VGoNzUAHbm7WQxt/WM3hZwaiaBBP1M9EnnjXylQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-21 15:15:31 -0700
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-06-21 15:15:36 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/12" for ::1 at 2016-06-21 15:15:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_in" for ::1 at 2016-06-21 15:15:37 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-06-21 15:15:40 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R4n4fQV14fkEahd4XY1qrPDQw4Gw1Hn8BqlPWkvzXH7uXDqYLxAC4oo81jJMY5LZ1YQmjA78pmbEU6s+1G/vHw==", "user"=>{"email"=>"1kabah@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "1kabah@gmail.com"]]
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 81ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/22" for ::1 at 2016-06-21 15:15:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 22]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.6ms)
