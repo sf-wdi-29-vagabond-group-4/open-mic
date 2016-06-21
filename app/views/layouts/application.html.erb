@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <nav class="teal">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Destinations</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if current_user %>
+        <li>You are logged in <%= current_user.first_name %> </li>
+        <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign in", sign_in_path, method: :get%></li>
+        <li><%= link_to "Sign up", new_user_path, method: :get%></li>
+      <% end %>
+      </ul>
+    </div>
+  </nav>
+  <title>Destinations</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
+        

@@ -1,0 +1,17 @@
+<h1>Add a Venue</h1>
+
+<%= form_for @venue do |form| %>
+
+  <%= form.text_field :name, placeholder: "Venue Name" %>
+  <%= form.text_field :street_one, placeholder: "123 Street Name" %>
+  <%= form.text_field :street_two, placeholder: "Suite 123" %>
+  <%= form.text_field :city, placeholder: "San Francisco" %>
+  <%= form.text_field :state, placeholder: "California" %>
+  <%= form.text_field :zipcode, placeholder: "12345" %>
+  <%= form.text_field :phone_number, placeholder: "123-123-1234" %>
+  <%= form.text_field :email, placeholder: "Contact email" %>
+  <%= form.text_area :description, placeholder: "Cool bar", size: "24x6" %>
+  <%= form.text_field :profile_pic, placeholder: "Photo URL" %>
+  <%= form.submit "Save!" %>
+
+<% end %>
