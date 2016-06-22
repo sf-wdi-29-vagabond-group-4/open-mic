@@ -11,6 +11,7 @@ require "./app/models/venue"
 require "faker"
 
 User.destroy_all
+Venue.destroy_all
 
 10.times do
   v = Venue.new
@@ -19,7 +20,7 @@ User.destroy_all
   v.city = "San Francisco"
   v.state = "CA"
   v.zipcode = Faker::Address.zip
-  v.phone_number = Faker::PhoneNumber.area_code #=>"415"
+  v.phone_number = Faker::PhoneNumber.cell_phone
   v.email = Faker::Internet.free_email
   v.description = Faker::Lorem.paragraph(4)
   v.profile_pic = Faker::Placeholdit.image
@@ -33,7 +34,7 @@ end
   v.city = "Chicago"
   v.state = "IL"
   v.zipcode = Faker::Address.zip
-  v.phone_number = Faker::PhoneNumber.area_code #=> "312"
+  v.phone_number = Faker::PhoneNumber.cell_phone
   v.email = Faker::Internet.free_email
   v.description = Faker::Lorem.paragraph(4)
   v.profile_pic = Faker::Placeholdit.image
