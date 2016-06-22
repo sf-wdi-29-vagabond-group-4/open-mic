@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+
   def home
       render :home
   end
@@ -7,6 +7,13 @@ class UsersController < ApplicationController
   def index
     @users = User.all.order(id: :desc)
     render :index
+  end
+
+  def visit
+    @user = current_user
+    @venue = Venue.find(params[:id])
+    @user.venues.push(@venue)
+    redirect_to @user
   end
 
   def new
@@ -43,6 +50,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
     redirect_to @user
+  end
+
+  def delete
+    @user = User.find(params[:id])
+    session.delete(:user_id)
+    @user.destroy
+    redirect_to "/venues"
   end
 
   private
