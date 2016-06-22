@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all.order(id: :desc)
+    @users = User.all.order(id: :asc)
     render :index
   end
 
