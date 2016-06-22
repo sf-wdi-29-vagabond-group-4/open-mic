@@ -1,5 +1,4 @@
 <h1>Sign Up Page</h1>
-
 <%= form_for @user do |f| %>
   <div>
     <%= f.text_field :profile_pic, placeholder: "Profile Photo" %>
@@ -26,4 +25,5 @@
     <%= f.text_area :description, placeholder: "Description" %>
   </div>
   <%= f.submit "Sign Up" %>
+
 <% end %>

@@ -1,5 +1,5 @@
 <h1>Add a Venue</h1>
-
+<%= bootstrap_flash %>
 <%= form_for @venue do |form| %>
 
   <%= form.text_field :name, placeholder: "Venue Name" %>
@@ -10,7 +10,7 @@
   <%= form.text_field :zipcode, placeholder: "12345" %>
   <%= form.text_field :phone_number, placeholder: "123-123-1234" %>
   <%= form.text_field :email, placeholder: "Contact email" %>
-  <%= form.text_area :description, placeholder: "Cool bar", size: "24x6" %>
+  <%= form.text_area :description, placeholder: "Description", size: "24x6" %>
   <%= form.text_field :profile_pic, placeholder: "Photo URL" %>
   <%= form.submit "Save!" %>
 

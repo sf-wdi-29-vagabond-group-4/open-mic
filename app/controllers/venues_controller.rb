@@ -19,7 +19,7 @@ class VenuesController < ApplicationController
     if @venue.save
       redirect_to @venue
     else
-      redirect_to new_venue_path
+      redirect_to new_venue_path, flash: {error: @venue.errors.full_messages.to_sentence}
     end
   end
 
