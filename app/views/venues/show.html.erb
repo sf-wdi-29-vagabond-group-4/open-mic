@@ -18,10 +18,10 @@
 <%= button_to "Delete", @venue, :method => :delete %>
 <br>
 <br>
-<h4>Users</h4>
+<h4>Followers</h4>
+<hr>
 <% @venue.users.each do |u| %>
 <ul>
-  <li>
-    <%= u.first_name + ' ' + u.last_name  %>
-  </li>
+  <li><%= link_to u.first_name, "/users/#{u.id}"  %></li>
+  <li><%= link_to image_tag(u.profile_pic), "/users/#{u.id}" %></li>
 <% end %>

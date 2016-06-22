@@ -1,4 +1,4 @@
-<div>Welcome, <%= @user.first_name %>, <%= @user.last_name %></div>
+<div>Welcome, <%= @user.first_name %> <%= @user.last_name %></div>
   <div>Current city: <%= @user.current_city %></div>
   <div>Join date: <%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %></div>
   <img src="<%= @user.profile_pic %>"></div>
@@ -6,14 +6,13 @@
 <%= button_to "Edit", edit_user_path(@user), :method => :get %>
 <%= button_to "Delete", @user, :method => :delete %>
 
+  <h3>Venues I Follow</h3>
+  <hr>
   <% @user.venues.each do |v| %>
   <ul>
-  	<li>
-  		<%= v.name %>
-  	</li>
-  	<li>
-  		<%= v.city %>
-  	</li>
+  	<li><%= link_to image_tag(v.profile_pic), "/venues/#{v.id}" %></li>
+    <li><%= link_to v.name, "/venues/#{v.id}" %></li>
+  	<li><%= v.city %></li>
   </ul>
   <% end %>
 

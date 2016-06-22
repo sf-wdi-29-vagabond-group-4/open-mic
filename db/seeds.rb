@@ -10,6 +10,7 @@ require "./app/models/user"
 require "./app/models/venue"
 require "faker"
 
+
 Venue.destroy_all
 
 10.times do

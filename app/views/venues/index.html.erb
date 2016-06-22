@@ -1,18 +1,16 @@
 <h1>Venues</h1>
-
-<%= form_tag "/venues", :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search]%>
-    <%= submit_tag "Search", :name => nil %>
-  <p>
-<% end %>
-
-<% @venues.each do |venue| %>
-	<ul>
-		<li><%= link_to image_tag(venue.profile_pic), venue %></li>
-		<li><%= venue.name %></li>
-		<li><%= venue.city %></li>
-	</ul>
-
-
-<% end %>
+<div>
+	<%= form_tag "/venues", :method => 'get' do %>
+	    <%= text_field_tag :search, params[:search]%>
+	    <%= submit_tag "Search", :name => nil %>
+	<% end %>
+</div>
+<div>
+	<% @venues.each do |venue| %>
+		<ul>
+			<li><%= link_to venue.name, venue %></li>
+			<li><%= venue.city %></li>
+			<li><%= link_to image_tag(venue.profile_pic), venue %></li>
+		</ul>
+	<% end %>
+</div>
