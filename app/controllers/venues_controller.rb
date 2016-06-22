@@ -1,4 +1,5 @@
 class VenuesController < ApplicationController
+before_action :require_login, except: [:show, :index]
 
   def index
     if params[:search] != nil
