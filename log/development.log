@@ -3543,3 +3543,482 @@ Processing by UsersController#show as HTML
   [1m[36mVenue Load (0.9ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 12]]
   Rendered users/show.html.erb within layouts/application (41.3ms)
 Completed 200 OK in 60ms (Views: 55.9ms | ActiveRecord: 2.6ms)
+  [1m[36mVenue Load (0.2ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35mVenue Load (0.6ms)[0m  SELECT "venues".* FROM "venues"
+  [1m[36mVenue Load (0.2ms)[0m  [1mSELECT "venues".* FROM "venues" WHERE "venues"."city" = $1[0m  [["city", "chicago"]]
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36mVenue Load (4.0ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1[0m  [["city", "chicago"]]
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1  [["city", "chicago"]]
+  [1m[36mVenue Load (1.5ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1[0m  [["city", "chicago"]]
+  [1m[35mVenue Load (0.4ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1  [["city", "chicago"]]
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1[0m  [["city", "chicago"]]
+  [1m[35mVenue Load (5.5ms)[0m  SELECT "venues".* FROM "venues"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mVenue Load (0.7ms)[0m  SELECT "venues".* FROM "venues"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mVisit Load (0.5ms)[0m  [1mSELECT "visits".* FROM "visits"[0m
+  [1m[35mVisit Load (0.9ms)[0m  SELECT "visits".* FROM "visits"
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "visits" WHERE "visits"."id" = $1  [["id", 4]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "visits" WHERE "visits"."id" = $1  [["id", 6]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "visits" WHERE "visits"."id" = $1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "visits" WHERE "visits"."id" = $1  [["id", 10]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "visits" WHERE "visits"."id" = $1  [["id", 12]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "visits" WHERE "visits"."id" = $1  [["id", 14]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "visits" WHERE "visits"."id" = $1  [["id", 16]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "visits" WHERE "visits"."id" = $1  [["id", 18]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVisit Load (0.3ms)[0m  [1mSELECT "visits".* FROM "visits"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mVenue Load (0.6ms)[0m  SELECT "venues".* FROM "venues"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 9]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 13]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 15]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 19]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 21]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 23]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 25]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 27]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 29]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 31]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 33]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 35]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 37]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 39]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 40]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 41]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 42]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 43]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 44]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 45]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 46]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 47]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 48]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 49]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 50]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 51]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 52]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 53]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 54]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 55]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 56]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 57]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 58]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 59]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 60]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Langworth-Wuckert"], ["street_one", "168 Francisco Cliff"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 91284], ["phone_number", 415], ["email", "pinkie.grant@gmail.com"], ["description", "Doloremque aliquid magni ut. Natus debitis deleniti adipisci. Quam quibusdam eaque eos corrupti sed distinctio. Reiciendis qui commodi temporibus corrupti. Id repudiandae neque aut ipsam perspiciatis."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.924912"], ["updated_at", "2016-06-22 03:18:36.924912"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Sanford and Sons"], ["street_one", "179 Tatyana Stravenue"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 79837], ["phone_number", 415], ["email", "yvette@yahoo.com"], ["description", "Consectetur quia aspernatur. Culpa et sed odit perferendis et aut. Et quis ratione. Aut nihil rem voluptatibus. Et pariatur voluptates atque iste. Ipsam est fugiat sed repudiandae."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.930480"], ["updated_at", "2016-06-22 03:18:36.930480"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Brekke LLC"], ["street_one", "61130 Kiehn Lodge"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 83030], ["phone_number", 415], ["email", "kellen@yahoo.com"], ["description", "Praesentium ab rerum. Iste exercitationem atque porro voluptas. Error aut ex pariatur velit. Eveniet incidunt et repellat vero ea itaque porro. Cumque qui esse harum. Sed quos nam."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.935323"], ["updated_at", "2016-06-22 03:18:36.935323"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Beahan-Shields"], ["street_one", "740 Zion Shoal"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 90573], ["phone_number", 415], ["email", "abdul_hane@hotmail.com"], ["description", "Aperiam error modi. Nam deserunt nesciunt magnam voluptatem tempore. Quis vitae error itaque similique deserunt aut. Quidem voluptas voluptas doloribus fugiat. Quia laudantium minima accusamus nesciunt consequatur distinctio dolor. Culpa officia et."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.940725"], ["updated_at", "2016-06-22 03:18:36.940725"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Gaylord Inc"], ["street_one", "7623 Terrence Gardens"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 41861], ["phone_number", 415], ["email", "newell@yahoo.com"], ["description", "Laborum eum ea tempore ea quam consequatur. Dolores eius hic. Possimus mollitia dolor rerum voluptatem velit. Adipisci molestiae similique. Reiciendis a necessitatibus. Neque delectus nesciunt aut autem."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.953907"], ["updated_at", "2016-06-22 03:18:36.953907"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Nienow Inc"], ["street_one", "395 Schroeder Curve"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 10622], ["phone_number", 415], ["email", "rose.price@yahoo.com"], ["description", "Explicabo autem impedit et harum. Minus doloremque ratione et. Architecto quis et rem praesentium est quaerat repudiandae. Atque est reprehenderit et voluptate. Aut culpa rerum et voluptatem dolorem. Fuga harum repellat dicta et quo maiores."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.959510"], ["updated_at", "2016-06-22 03:18:36.959510"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Cartwright, Harber and Gusikowski"], ["street_one", "350 Mann Cape"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 46333], ["phone_number", 415], ["email", "fredrick@yahoo.com"], ["description", "Inventore sunt quia et quibusdam est. Perferendis et consequatur consectetur esse pariatur nihil minus. Mollitia cupiditate accusamus et amet nulla delectus nostrum. Autem aliquam ad hic. Non rem et odit quasi quia mollitia."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.964822"], ["updated_at", "2016-06-22 03:18:36.964822"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Will, Pollich and Wolff"], ["street_one", "8510 Dicki Orchard"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 27527], ["phone_number", 415], ["email", "shaniya.collier@hotmail.com"], ["description", "Esse optio repellendus est velit qui voluptas. Voluptates sed voluptatem labore voluptas earum. Ipsum quisquam vel sed omnis blanditiis molestiae. At sed molestiae est ex rerum."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.970019"], ["updated_at", "2016-06-22 03:18:36.970019"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Sanford, Pfannerstill and Skiles"], ["street_one", "48724 Paucek Turnpike"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 55138], ["phone_number", 415], ["email", "alice@gmail.com"], ["description", "Voluptas qui autem dolorum sed architecto et earum. Sint at doloribus recusandae rerum saepe. Excepturi cumque qui blanditiis unde id. Placeat culpa fuga sint adipisci. Aut ipsa cumque provident. Velit alias non saepe rerum assumenda maxime."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.975957"], ["updated_at", "2016-06-22 03:18:36.975957"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Hettinger Inc"], ["street_one", "7897 Spencer Squares"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 74450], ["phone_number", 415], ["email", "max.johnson@hotmail.com"], ["description", "Quia voluptatum voluptatem quas dolor aut et. Nulla ullam omnis. Aut sequi qui nesciunt consequatur qui. Et molestias pariatur. Qui enim accusamus repellat. Sed pariatur nisi quia rerum accusantium."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.981911"], ["updated_at", "2016-06-22 03:18:36.981911"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Gusikowski-O'Reilly"], ["street_one", "2753 Goyette Walk"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 87408], ["phone_number", 312], ["email", "madyson_pagac@hotmail.com"], ["description", "Cupiditate hic officia labore eius et dignissimos explicabo. Eius pariatur veniam reprehenderit dignissimos. Atque et cumque illo sequi beatae blanditiis. Quisquam fugiat ex corporis omnis harum quidem sit."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.987176"], ["updated_at", "2016-06-22 03:18:36.987176"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Shanahan-Kassulke"], ["street_one", "957 Torphy Parks"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 41463], ["phone_number", 312], ["email", "robb@hotmail.com"], ["description", "Velit non minus quibusdam. Illum ea dolores. Illum eos modi. Omnis a doloremque et voluptas esse veniam ut."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.992239"], ["updated_at", "2016-06-22 03:18:36.992239"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Klocko-Graham"], ["street_one", "56308 Spinka Lock"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 72920], ["phone_number", 312], ["email", "rosario@hotmail.com"], ["description", "Cum voluptas quam voluptatum enim. Recusandae et aperiam id et aut aspernatur. Ea dolore exercitationem molestias. Expedita sint aliquam veritatis et amet temporibus cum."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:36.997476"], ["updated_at", "2016-06-22 03:18:36.997476"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Senger-Thiel"], ["street_one", "9413 Trever Unions"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 17438], ["phone_number", 312], ["email", "kacie@gmail.com"], ["description", "Pariatur consectetur voluptatum. Unde ipsa sapiente et. Ipsum aut animi eos ad perferendis nihil. In eius dolorem debitis eaque sunt sint. Dolores odio natus quae error repellendus aut quidem."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:37.003293"], ["updated_at", "2016-06-22 03:18:37.003293"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Casper Inc"], ["street_one", "780 Leannon Heights"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 32500], ["phone_number", 312], ["email", "minnie@hotmail.com"], ["description", "Nihil eos animi sed necessitatibus veniam et. Odit porro eveniet quibusdam quasi occaecati. Est aut odit aut. Unde in nemo in."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:37.008842"], ["updated_at", "2016-06-22 03:18:37.008842"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Stracke-Block"], ["street_one", "21514 Vanessa Track"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 27334], ["phone_number", 312], ["email", "dave_schuppe@yahoo.com"], ["description", "Sed quisquam sit modi. Et quod sunt vel cupiditate dolorum enim. Doloribus quos est similique neque dignissimos. Id tempora laboriosam. Nisi accusantium odit repudiandae voluptas cupiditate."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:37.015236"], ["updated_at", "2016-06-22 03:18:37.015236"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Satterfield Inc"], ["street_one", "80437 Pagac Course"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 21557], ["phone_number", 312], ["email", "anna_trantow@yahoo.com"], ["description", "Est distinctio aut. Explicabo qui sint voluptatem doloribus aut voluptatum. Nihil et ea illo vel a. Assumenda maiores porro iure. Nihil fugiat similique perspiciatis eveniet minima. Sunt aut illum eos molestiae sit."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:37.021809"], ["updated_at", "2016-06-22 03:18:37.021809"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Stamm, Harvey and Barton"], ["street_one", "32130 Monty Mission"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 96515], ["phone_number", 312], ["email", "mortimer@hotmail.com"], ["description", "Cupiditate libero repellat et velit qui necessitatibus. Minus voluptas ullam. Iusto laborum numquam quisquam quia. Voluptatum error totam."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:37.026865"], ["updated_at", "2016-06-22 03:18:37.026865"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Quigley, Lang and Willms"], ["street_one", "856 Kihn Mountain"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 19774], ["phone_number", 312], ["email", "merl_altenwerth@hotmail.com"], ["description", "Fugit dolorem inventore harum est. Tempora molestiae quasi impedit vero quod delectus. Ex quas et enim excepturi. Consequatur qui minima facere. Nobis quas iusto facere velit quaerat aut dicta."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:37.032501"], ["updated_at", "2016-06-22 03:18:37.032501"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Conn-Kihn"], ["street_one", "7224 Jaron Streets"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 10172], ["phone_number", 312], ["email", "margaretta@gmail.com"], ["description", "Accusantium labore rerum eaque quia. Quo esse blanditiis fugiat totam nihil eos recusandae. Nihil alias et fugiat et eos. Numquam cumque ea et. Et qui eos illum molestiae. Maiores atque quae ut ea qui vel."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:18:37.038803"], ["updated_at", "2016-06-22 03:18:37.038803"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[35mVenue Load (0.4ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1  [["city", "chicago"]]
+  [1m[36mVenue Load (2.1ms)[0m  [1mSELECT "venues".* FROM "venues"[0m
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1  [["city", "Chicago"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeColumnVenueTable (20160622033057)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.9ms)[0m  [1mALTER TABLE "venues" ALTER COLUMN "phone_number" TYPE character varying[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160622033057"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'venues'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'visits'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mVenue Load (0.8ms)[0m  SELECT "venues".* FROM "venues"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 61]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 62]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 63]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 64]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 65]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 66]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 67]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 68]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 69]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 70]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 71]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 72]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 73]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 74]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 75]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 76]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 77]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 78]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 79]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 80]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Weimann LLC"], ["street_one", "2352 Satterfield Estate"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 97580], ["phone_number", "415-555-1212"], ["email", "dejon_renner@yahoo.com"], ["description", "Eum laborum quas animi nam omnis. Voluptatibus et nemo commodi odit. Deleniti debitis temporibus non porro eius. Error perferendis quaerat officia. Voluptas magni ipsum quasi."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:45.967101"], ["updated_at", "2016-06-22 03:35:45.967101"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Frami-Schinner"], ["street_one", "714 Dicki Parkways"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 63644], ["phone_number", "415-555-1212"], ["email", "carley_heathcote@hotmail.com"], ["description", "Nemo aut qui qui rerum ullam qui veniam. Explicabo sunt doloremque et unde ut consequatur. Nostrum sit culpa. Fugit sapiente cupiditate accusamus corporis tempore quis ut. Voluptate consequatur enim omnis suscipit libero consequatur. Incidunt corporis aut sit qui velit."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:45.973431"], ["updated_at", "2016-06-22 03:35:45.973431"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Schumm-Purdy"], ["street_one", "5444 Grant Ports"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 56095], ["phone_number", "415-555-1212"], ["email", "kari@gmail.com"], ["description", "Quod dolor et nobis odio quo. Aut voluptatem odio expedita. Et fugiat corrupti non quam ullam esse sed. Id aliquam quas."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:45.980418"], ["updated_at", "2016-06-22 03:35:45.980418"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Rohan-McCullough"], ["street_one", "17160 Polly Row"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 63037], ["phone_number", "415-555-1212"], ["email", "hollie@hotmail.com"], ["description", "Nesciunt nihil sed reprehenderit. Neque dolores sed repudiandae. Sunt assumenda maiores tempora dignissimos qui ullam. Quia similique qui nam animi inventore dicta."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:45.986762"], ["updated_at", "2016-06-22 03:35:45.986762"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Gibson Inc"], ["street_one", "57300 Stuart Skyway"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 20184], ["phone_number", "415-555-1212"], ["email", "jamil@yahoo.com"], ["description", "Nihil velit ab aliquid cum saepe animi qui. Quas enim sed quidem eum vel dolores aut. Distinctio labore mollitia reprehenderit et debitis aspernatur culpa. Perferendis sit consectetur consequuntur qui voluptas."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:45.991623"], ["updated_at", "2016-06-22 03:35:45.991623"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Raynor-Wolf"], ["street_one", "890 Harvey Spring"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 21397], ["phone_number", "415-555-1212"], ["email", "cathryn_gutmann@yahoo.com"], ["description", "Ratione eaque rerum. Sed quo cupiditate placeat eligendi. Voluptatem repudiandae qui facilis ad excepturi vel similique. Tenetur in non corrupti veritatis consequuntur. Exercitationem nihil officia impedit quia temporibus aut."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:45.998033"], ["updated_at", "2016-06-22 03:35:45.998033"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Luettgen, Schroeder and Gutkowski"], ["street_one", "1752 Brakus Station"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 49835], ["phone_number", "415-555-1212"], ["email", "vernon_carroll@hotmail.com"], ["description", "Mollitia dolore velit exercitationem velit nesciunt. Consequuntur vel sit voluptas occaecati unde facere. Deserunt tempora libero debitis. Non error ut dolore aut qui veritatis est. Adipisci quasi eveniet distinctio."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.014147"], ["updated_at", "2016-06-22 03:35:46.014147"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "DuBuque LLC"], ["street_one", "61114 Yvonne Lodge"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 34841], ["phone_number", "415-555-1212"], ["email", "queenie@gmail.com"], ["description", "Quis sit neque dolore magnam. Ut sunt quibusdam fuga repudiandae aut architecto ad. Amet in qui sit. Corrupti sed aperiam sunt delectus qui cum architecto."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.020924"], ["updated_at", "2016-06-22 03:35:46.020924"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Schaefer, Fritsch and Moen"], ["street_one", "747 Welch Stream"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 47653], ["phone_number", "415-555-1212"], ["email", "america.reichert@hotmail.com"], ["description", "Perferendis veniam totam vitae velit. Placeat repudiandae sunt nostrum cupiditate velit iure. Iusto veniam in. Velit fugit ducimus cumque ut ut molestiae eos. Consectetur amet rerum architecto autem sed consequatur."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.026573"], ["updated_at", "2016-06-22 03:35:46.026573"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Rosenbaum, Howe and Shields"], ["street_one", "33165 Woodrow Squares"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 92249], ["phone_number", "415-555-1212"], ["email", "max@gmail.com"], ["description", "Optio rem unde sit nulla. Quis accusantium itaque qui et omnis est amet. Laudantium nisi voluptate et inventore possimus quod. Hic dolores quia ratione eius. Recusandae repudiandae nihil natus aut sunt."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.031286"], ["updated_at", "2016-06-22 03:35:46.031286"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Hamill Inc"], ["street_one", "37956 Caroline Radial"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 19062], ["phone_number", "312-555-1212"], ["email", "carli_boyle@gmail.com"], ["description", "Neque suscipit quos. Rem voluptates deleniti. Expedita animi sunt sapiente sed dolor. Voluptates repellat harum. Fuga rem aliquam eius."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.036387"], ["updated_at", "2016-06-22 03:35:46.036387"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Ebert Group"], ["street_one", "21962 Hartmann Rest"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 13623], ["phone_number", "312-555-1212"], ["email", "lucious@hotmail.com"], ["description", "Nemo sunt voluptatem nihil quis. Dolores qui doloribus. Provident autem est repellendus similique beatae. A alias id eius recusandae ea corrupti vero."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.042348"], ["updated_at", "2016-06-22 03:35:46.042348"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Fadel Group"], ["street_one", "84894 Reichel Turnpike"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 81322], ["phone_number", "312-555-1212"], ["email", "vivienne.wintheiser@gmail.com"], ["description", "Vel illo et et qui. Quisquam porro maiores doloremque vel. Cupiditate veritatis quo unde recusandae. Ipsam omnis voluptatibus eveniet qui delectus. Labore quia totam ipsum debitis voluptas."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.046853"], ["updated_at", "2016-06-22 03:35:46.046853"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Champlin Inc"], ["street_one", "760 Marquardt Path"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 11154], ["phone_number", "312-555-1212"], ["email", "colten@gmail.com"], ["description", "Dolorum voluptatem omnis saepe. Fuga itaque cum aut voluptatem maiores sed aspernatur. Rerum officiis dolorem molestiae sunt reprehenderit. Omnis modi numquam sint at delectus. Enim molestias voluptatem."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.051051"], ["updated_at", "2016-06-22 03:35:46.051051"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Rath, Schaden and Hodkiewicz"], ["street_one", "13767 Jocelyn Prairie"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 71257], ["phone_number", "312-555-1212"], ["email", "greyson.stehr@yahoo.com"], ["description", "Natus doloribus eos doloremque. Ea vero in ratione quam. Nemo nam et ut odit qui blanditiis. Aut ut sunt tempore. Officia error quia magnam voluptas voluptas provident."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.057186"], ["updated_at", "2016-06-22 03:35:46.057186"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Klocko Inc"], ["street_one", "452 Keara Mission"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 39813], ["phone_number", "312-555-1212"], ["email", "carter_graham@yahoo.com"], ["description", "Sapiente qui sunt. Asperiores rerum voluptates libero repudiandae vitae. Omnis saepe dignissimos tempore adipisci. Modi sed vero vel omnis. Sit enim ab. Animi velit est."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.062225"], ["updated_at", "2016-06-22 03:35:46.062225"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Prosacco-Weimann"], ["street_one", "230 Hertha Land"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 29819], ["phone_number", "312-555-1212"], ["email", "leonor@yahoo.com"], ["description", "Ab tempora at cum dolorum dolorem consequatur. Est est explicabo ad. Veritatis perspiciatis neque magnam excepturi deleniti ex. Est voluptate rerum voluptatem. Occaecati voluptates vel quos beatae non ipsam."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.067029"], ["updated_at", "2016-06-22 03:35:46.067029"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Shields-Fadel"], ["street_one", "879 Furman Isle"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 44282], ["phone_number", "312-555-1212"], ["email", "adell.padberg@hotmail.com"], ["description", "Debitis laudantium velit. Sunt saepe aut. Omnis earum quo corporis accusamus repellendus voluptate. Deserunt qui nulla sit omnis modi id aut. Reiciendis sed laudantium nihil occaecati."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.072994"], ["updated_at", "2016-06-22 03:35:46.072994"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Steuber LLC"], ["street_one", "145 Tillman Garden"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 12142], ["phone_number", "312-555-1212"], ["email", "dangelo.schimmel@yahoo.com"], ["description", "Odio dignissimos saepe. Commodi repudiandae molestiae itaque sunt. Voluptas delectus repellat aperiam est necessitatibus aut. Necessitatibus sapiente sit assumenda mollitia dolorum sed. Voluptas omnis quo eum doloremque ut."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.080292"], ["updated_at", "2016-06-22 03:35:46.080292"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Rippin LLC"], ["street_one", "609 Ivy Lane"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 29436], ["phone_number", "312-555-1212"], ["email", "crawford.rutherford@yahoo.com"], ["description", "Quod sapiente consequatur quis impedit id officia. Nulla dolorum ipsum. Vel delectus explicabo odit ut tempora minus deleniti. Magni omnis numquam molestiae nihil ipsum provident. Adipisci rerum exercitationem quibusdam omnis nam dolor itaque."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 03:35:46.086237"], ["updated_at", "2016-06-22 03:35:46.086237"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mVenue Load (7.4ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1[0m  [["city", "Chicago"]]
+  [1m[35mVenue Load (0.4ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1  [["city", "Chicago"]]
+  [1m[36mVenue Load (0.5ms)[0m  [1mSELECT "venues".* FROM "venues"[0m
