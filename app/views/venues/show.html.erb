@@ -1,5 +1,7 @@
 <h1> <%= @venue.name %></h1>
 
+<%= button_to "Save Venue", new_visit_path(@venue), :method => :post %>
+
 <ul>
   <li> <%= @venue.street_one %></li>
   <li> <%= @venue.street_two %></li>
@@ -14,3 +16,12 @@
 
 <%= button_to "Edit", edit_venue_path(@venue), :method => :get %>
 <%= button_to "Delete", @venue, :method => :delete %>
+<br>
+<br>
+<h4>Users</h4>
+<% @venue.users.each do |u| %>
+<ul>
+  <li>
+    <%= u.first_name + ' ' + u.last_name  %>
+  </li>
+<% end %>

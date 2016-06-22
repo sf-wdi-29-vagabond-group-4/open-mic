@@ -14,13 +14,7 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy", as: "delete"
 
+  post '/venues/:id', to: "users#visit", as: "new_visit"
+
   resources :venues
 end
-
-
-
-
-
-
-
-

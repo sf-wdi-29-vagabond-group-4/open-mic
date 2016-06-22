@@ -4500,3 +4500,1484 @@ Processing by VenuesController#index as HTML
   [1m[36mVenue Load (0.6ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."id" DESC[0m
   Rendered venues/index.html.erb within layouts/application (2.5ms)
 Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'venues'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'visits'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (8.5ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Humberto"], ["last_name", "Hilll"], ["email", "vivianne@yahoo.com"], ["password_digest", "$2a$10$Emx2wArc3peOjOPfYgUTQunY2/RG6qlPKdkwTT/wb17hUfH/XWdfS"], ["description", "Ut dolore nesciunt non magni dolores nihil id. Dolores amet blanditiis libero at nihil repudiandae. Vel facere repellat corrupti molestiae provident dignissimos. Ducimus qui voluptatum et. Voluptas officiis mollitia excepturi nam cumque est."], ["current_city", "Chynaborough"], ["age", 67], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.111180"], ["updated_at", "2016-06-22 15:47:50.111180"]]
+  [1m[35m (12.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["first_name", "Sherman"], ["last_name", "Cole"], ["email", "edgardo@yahoo.com"], ["password_digest", "$2a$10$oUr2xmcS7g4v/paSTcb1UeaKgAUTXHVIAj5hA8hryf557x08Cjjs6"], ["description", "Consectetur sit aspernatur ex nihil iste illum. Delectus autem in enim corrupti ea. Molestias beatae quisquam. Amet enim dolorem eum est quam nobis cupiditate."], ["current_city", "Judsonbury"], ["age", 87], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.234321"], ["updated_at", "2016-06-22 15:47:50.234321"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Weldon"], ["last_name", "Hettinger"], ["email", "christiana_cormier@gmail.com"], ["password_digest", "$2a$10$KrRkIpPs///sx7Fq7ttkDukuhucwq.We1SLf1.Ru.pCTrhSpHBon2"], ["description", "Sed est in omnis. Tempore unde autem sint dignissimos. Hic aut et minima quaerat. Beatae dolor et doloremque velit nihil enim."], ["current_city", "Kassandratown"], ["age", 62], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.331447"], ["updated_at", "2016-06-22 15:47:50.331447"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["first_name", "Nicholaus"], ["last_name", "Price"], ["email", "willow@hotmail.com"], ["password_digest", "$2a$10$247CH4HEopf1J7kRM.8SA.lj3aE3dmcxv8O0pTHe43MNX.1Jqfxrm"], ["description", "Eum dolore et hic provident rem iste. Enim sed numquam sint dolor ab et expedita. Placeat atque ut voluptate velit deserunt. Esse et laborum dolorem dolor voluptatum qui consequatur. Odit reprehenderit officiis optio enim qui delectus voluptatem."], ["current_city", "Lake Arvel"], ["age", 88], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.429836"], ["updated_at", "2016-06-22 15:47:50.429836"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Deontae"], ["last_name", "Bartoletti"], ["email", "lauriane@yahoo.com"], ["password_digest", "$2a$10$qIbl90/z5N54lAeqpuR2jOFIP/uulvC54wMolJ7iRJgVm/HSjObai"], ["description", "Ea dolore earum officiis sed aut similique voluptatem. Est sit dolorem provident amet voluptates. Voluptatem occaecati quo quasi aliquid aliquam aut. Veniam aliquid sit."], ["current_city", "South Juliahaven"], ["age", 40], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.528231"], ["updated_at", "2016-06-22 15:47:50.528231"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["first_name", "Russel"], ["last_name", "Steuber"], ["email", "laurie@gmail.com"], ["password_digest", "$2a$10$GIDGDbarbjToE1oHlznGseFTXHBJs7swIs41zfE3OnAXBlxqZ7kgi"], ["description", "Consequatur laborum incidunt. Cumque quae inventore sint aspernatur mollitia adipisci voluptatem. Molestiae similique consectetur et ipsam corrupti aliquam harum. Quod quas et. Molestias facilis sed quis dolorem. Odit assumenda eum est."], ["current_city", "Elfriedaland"], ["age", 41], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.630873"], ["updated_at", "2016-06-22 15:47:50.630873"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Jazmyne"], ["last_name", "Douglas"], ["email", "audra@hotmail.com"], ["password_digest", "$2a$10$YXqlB5pGNwT3oyouuIMmXuSy5Pi8EQ87sE3ZfwR9wk42JCvmzyhJu"], ["description", "Velit facilis sed quibusdam vel reiciendis accusantium. Ab ut dolor. Et quia quia aut dicta. Ea molestiae fugit asperiores quaerat in quos. Vero rerum error et incidunt magni est. Voluptatem dolores laboriosam eos quibusdam voluptatem ut eum."], ["current_city", "Dibbertchester"], ["age", 85], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.730508"], ["updated_at", "2016-06-22 15:47:50.730508"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["first_name", "Naomi"], ["last_name", "Lebsack"], ["email", "emelie_corkery@hotmail.com"], ["password_digest", "$2a$10$Iv6bGG7qeAH9y3/Rm7uDpunZfGPtIb6NmNbFK8WE76tLLi5.MFxNK"], ["description", "Ea eum sed. Soluta nobis architecto dolores omnis sed praesentium non. Tempora et possimus nostrum assumenda deleniti molestias autem. Necessitatibus dignissimos exercitationem accusantium minima illum quia animi. Numquam cum incidunt. Enim ut impedit est molestiae animi."], ["current_city", "New Jalonchester"], ["age", 25], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.833063"], ["updated_at", "2016-06-22 15:47:50.833063"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Holly"], ["last_name", "Sanford"], ["email", "ken@gmail.com"], ["password_digest", "$2a$10$mYkiMybrvbjRduNXmpWYLOGNaJjJURVFN1wD1N6h2CVNSxenHvgXW"], ["description", "Nulla provident tempore nam. Inventore quasi consequatur. Nisi explicabo cupiditate blanditiis occaecati ut. Velit repellat beatae illum. Deleniti tempora dolores corrupti nisi unde beatae porro."], ["current_city", "Huberttown"], ["age", 92], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:50.941837"], ["updated_at", "2016-06-22 15:47:50.941837"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "description", "current_city", "age", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["first_name", "Nickolas"], ["last_name", "Swaniawski"], ["email", "dereck_homenick@hotmail.com"], ["password_digest", "$2a$10$TaNXVMskF9aWMpKIHQJQKO9oxLXy51CbbcXPXcBxCqzIOPYYrz94K"], ["description", "Eaque et et. Doloremque id eum sit aut adipisci eum. Et architecto et. Modi molestias qui. Laboriosam tempora sit porro fuga amet aut consequuntur."], ["current_city", "East Marytown"], ["age", 25], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.040979"], ["updated_at", "2016-06-22 15:47:51.040979"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Romaguera-Rice"], ["street_one", "976 Doyle Path"], ["city", "West Lenny"], ["state", "Michigan"], ["zipcode", 47565], ["phone_number", 935], ["email", "junius@hotmail.com"], ["description", "Unde dolorem nulla magni et consectetur vel. Sed ullam nihil est optio repudiandae hic. Et deserunt autem qui. Velit in provident dolores eum sint id perferendis. Esse sed in similique voluptas eum enim."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.060068"], ["updated_at", "2016-06-22 15:47:51.060068"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Larkin LLC"], ["street_one", "675 Johnnie Square"], ["city", "Kleinview"], ["state", "Maine"], ["zipcode", 64210], ["phone_number", 557], ["email", "naomi@yahoo.com"], ["description", "Illum eos laudantium asperiores aut veniam minus in. Aliquam quis enim quos aut. Nemo eos voluptate et facere. Nisi placeat et voluptatem voluptas et consectetur. Minima et est. Et ipsam repellendus dolore odit."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.065558"], ["updated_at", "2016-06-22 15:47:51.065558"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Schinner-Armstrong"], ["street_one", "1631 Reanna Haven"], ["city", "West Hazle"], ["state", "Alabama"], ["zipcode", 61919], ["phone_number", 1], ["email", "adah@hotmail.com"], ["description", "Facilis vero iure sed sint eos minima molestiae. Quia nobis magni ea rerum sequi ipsam. Sed nisi sunt asperiores ut id. Consequatur adipisci id veniam esse qui doloribus. Id eius quia nostrum. Ut totam sit vel ea sunt ratione."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.069705"], ["updated_at", "2016-06-22 15:47:51.069705"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Stracke LLC"], ["street_one", "698 Dorothea Drive"], ["city", "Aureliobury"], ["state", "West Virginia"], ["zipcode", 94331], ["phone_number", 1], ["email", "tobin@gmail.com"], ["description", "Quod aut a eos. Quia reprehenderit mollitia reiciendis repudiandae commodi voluptas culpa. Tempora vel aut. Sapiente recusandae ipsam dolorem. Unde explicabo impedit minus architecto expedita. Reprehenderit cumque voluptatibus nam blanditiis eveniet alias."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.075164"], ["updated_at", "2016-06-22 15:47:51.075164"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Zemlak, Stamm and Trantow"], ["street_one", "7236 Christine Curve"], ["city", "Andreanneland"], ["state", "Montana"], ["zipcode", 55913], ["phone_number", 0], ["email", "bella@gmail.com"], ["description", "Repellat modi qui consectetur et et debitis explicabo. Numquam voluptatem ullam placeat doloribus rerum. Sequi libero eligendi non tempore. Quo vero dolor."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.079990"], ["updated_at", "2016-06-22 15:47:51.079990"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Stokes-Kuhic"], ["street_one", "83603 Magnolia Spring"], ["city", "Lake Dino"], ["state", "South Dakota"], ["zipcode", 10788], ["phone_number", 1], ["email", "vince.vandervort@gmail.com"], ["description", "Maiores expedita natus. Autem atque odit et voluptas accusamus voluptates. Non aut et aut. Ut atque voluptatibus. Temporibus placeat et consequatur. Et soluta porro similique dolores aut."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.084071"], ["updated_at", "2016-06-22 15:47:51.084071"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Pacocha, Schmitt and Lubowitz"], ["street_one", "59827 Marilou Pass"], ["city", "Port Dorthaport"], ["state", "Ohio"], ["zipcode", 13567], ["phone_number", 716], ["email", "dewitt_labadie@yahoo.com"], ["description", "Distinctio dolores voluptatibus culpa ipsa laborum ut. Labore possimus minima ipsa voluptates. Sit dolores accusamus ut blanditiis. Sunt similique consequatur voluptatem sit quia atque nobis. Hic autem rerum ea est qui iure."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.089114"], ["updated_at", "2016-06-22 15:47:51.089114"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Leannon LLC"], ["street_one", "848 Braulio Cliff"], ["city", "South Ferminmouth"], ["state", "Massachusetts"], ["zipcode", 69538], ["phone_number", 1], ["email", "aniyah_dooley@yahoo.com"], ["description", "Placeat in consequatur omnis molestiae itaque. At est temporibus fuga. Voluptatum iusto rerum. Eaque iusto autem quo cupiditate a. Qui neque dolores temporibus commodi quos aliquam inventore."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.094911"], ["updated_at", "2016-06-22 15:47:51.094911"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Koelpin-Goyette"], ["street_one", "596 VonRueden Cove"], ["city", "Lake Abdielmouth"], ["state", "Delaware"], ["zipcode", 84676], ["phone_number", 1], ["email", "arely@yahoo.com"], ["description", "Nostrum corrupti modi sapiente quae. Impedit consequatur consectetur enim est id veritatis et. Tempora est voluptas iure culpa ea amet. Eligendi repellat cum est ut quo doloremque voluptatum. Dolorum quis qui suscipit omnis natus."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.099263"], ["updated_at", "2016-06-22 15:47:51.099263"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Cummings and Sons"], ["street_one", "2374 Gwendolyn Junctions"], ["city", "Watersside"], ["state", "Washington"], ["zipcode", 48277], ["phone_number", 939], ["email", "vern.sauer@hotmail.com"], ["description", "Ullam velit harum qui animi reprehenderit enim esse. Voluptate eius unde autem nobis vero. In dolor sint esse maxime ab et illo. Atque molestias soluta nihil est et ratione."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.103444"], ["updated_at", "2016-06-22 15:47:51.103444"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Boyle and Sons"], ["street_one", "215 Graham Spurs"], ["city", "Francescoville"], ["state", "Oklahoma"], ["zipcode", 18279], ["phone_number", 0], ["email", "marques.hickle@gmail.com"], ["description", "Dolorum quaerat praesentium. Sapiente expedita a ratione reiciendis rerum. Dolor ipsam assumenda occaecati. Temporibus eos debitis sed architecto est eos."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.108263"], ["updated_at", "2016-06-22 15:47:51.108263"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Schimmel-Botsford"], ["street_one", "781 Jude Isle"], ["city", "New Katelyn"], ["state", "Tennessee"], ["zipcode", 97673], ["phone_number", 497], ["email", "rozella_schneider@yahoo.com"], ["description", "Et et rerum maiores quisquam suscipit. Dolorem dolore nihil et et voluptas. Qui culpa provident laudantium quam at. Accusantium eos perferendis eos ipsum autem. Officiis eaque et sint."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.112962"], ["updated_at", "2016-06-22 15:47:51.112962"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Hermiston, Stamm and Kihn"], ["street_one", "58985 Paucek Plaza"], ["city", "Darrenfurt"], ["state", "Idaho"], ["zipcode", 31674], ["phone_number", 100], ["email", "mabel.bode@gmail.com"], ["description", "Et animi neque officia maiores. Dolores doloremque culpa iste libero. Hic quis consequatur quas. Distinctio autem assumenda. Laudantium omnis fugit velit voluptas molestiae."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.117343"], ["updated_at", "2016-06-22 15:47:51.117343"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Runolfsson and Sons"], ["street_one", "694 Simonis Route"], ["city", "South Florianfurt"], ["state", "Nebraska"], ["zipcode", 34302], ["phone_number", 938], ["email", "hailey.wolf@gmail.com"], ["description", "Eius hic et earum eum. Dolorem magnam provident totam iste. Aut deleniti quia repudiandae et ab ut. Aut unde laborum neque et. Sunt cum provident. Laudantium quas quos facere occaecati ullam."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.121989"], ["updated_at", "2016-06-22 15:47:51.121989"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Stiedemann, Schaden and Hahn"], ["street_one", "633 Gabriel Square"], ["city", "Namechester"], ["state", "New York"], ["zipcode", 25032], ["phone_number", 0], ["email", "leonel@hotmail.com"], ["description", "Dolor tempore esse numquam doloremque explicabo. Veritatis ut est aut. Consequatur dolores accusantium repellendus sunt consequuntur et. Perferendis laboriosam id unde ratione quia. Laborum omnis sed qui laboriosam occaecati aliquid."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.126319"], ["updated_at", "2016-06-22 15:47:51.126319"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Morissette, Howe and Pacocha"], ["street_one", "79686 Gudrun Forge"], ["city", "Anissaburgh"], ["state", "Mississippi"], ["zipcode", 67307], ["phone_number", 1], ["email", "flo_bogisich@yahoo.com"], ["description", "Tenetur nemo et omnis maxime at. Et vel officia nesciunt odit reiciendis deserunt. Quos et ipsa qui voluptatem aut ab. Explicabo cupiditate dolorem vitae quae."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.130575"], ["updated_at", "2016-06-22 15:47:51.130575"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Franecki LLC"], ["street_one", "67201 Jaclyn Cape"], ["city", "Lake Immanuel"], ["state", "Oklahoma"], ["zipcode", 45258], ["phone_number", 0], ["email", "daija@gmail.com"], ["description", "Quos est nemo rem consequatur. Molestias non quibusdam voluptas sit debitis mollitia molestiae. Quia rerum et molestiae numquam. Ut quis id. Cumque vero expedita minima reiciendis. Numquam sit ex ut."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.134926"], ["updated_at", "2016-06-22 15:47:51.134926"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Auer-Collier"], ["street_one", "945 Jonatan Ridges"], ["city", "Port Marquistown"], ["state", "Florida"], ["zipcode", 94595], ["phone_number", 275], ["email", "madalyn.mcglynn@yahoo.com"], ["description", "Debitis aut consequuntur. Consequatur voluptate dolor dignissimos nihil quo tempora. Sint quam rerum est reiciendis. Deserunt occaecati atque qui dolorum ullam dolorem. Consequuntur sed expedita qui ab."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.139903"], ["updated_at", "2016-06-22 15:47:51.139903"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Marvin, Ortiz and Turcotte"], ["street_one", "8104 Cormier Oval"], ["city", "Port Eve"], ["state", "Idaho"], ["zipcode", 30784], ["phone_number", 837], ["email", "sofia@gmail.com"], ["description", "Consequatur enim repudiandae non cumque. Velit vitae enim. Eos commodi consequatur sit. Temporibus neque veniam delectus nostrum veritatis et."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.144693"], ["updated_at", "2016-06-22 15:47:51.144693"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Rogahn, Christiansen and Schamberger"], ["street_one", "20432 Renner Inlet"], ["city", "Juniusmouth"], ["state", "Washington"], ["zipcode", 52993], ["phone_number", 0], ["email", "jaquelin@yahoo.com"], ["description", "Voluptates quia suscipit quo quod deleniti repudiandae. Quo hic sequi officiis aut quia placeat vel. Nulla pariatur facilis minima. Non assumenda incidunt nostrum quam."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 15:47:51.148958"], ["updated_at", "2016-06-22 15:47:51.148958"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2016-06-22 08:48:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 1004ms (Views: 985.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-22 08:48:33 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (1.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."id" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (29.1ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 74ms (Views: 64.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/images/url" for ::1 at 2016-06-22 08:48:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/url"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (16.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (460.4ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1258.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1479.4ms)
+
+
+Started GET "/images/a" for ::1 at 2016-06-22 08:48:36 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/a"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (189.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (111.3ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (253.5ms)
+
+
+Started GET "/users" for ::1 at 2016-06-22 08:48:45 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 91134ms (Views: 81.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-22 08:50:16 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (13.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 145ms (Views: 68.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/1" for ::1 at 2016-06-22 08:50:16 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (6.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mVenue Load (7.4ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (231.0ms)
+Completed 200 OK in 397ms (Views: 376.2ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-22 08:50:29 -0700
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for ::1 at 2016-06-22 08:50:34 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for ::1 at 2016-06-22 08:50:38 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mVenue Load (0.5ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/venues/2" for ::1 at 2016-06-22 08:50:53 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered venues/show.html.erb within layouts/application (5.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 58ms (Views: 45.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/venues/2" for ::1 at 2016-06-22 08:58:31 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered venues/show.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 76ms (Views: 55.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 08:58:31 -0700
+
+
+Started POST "/venues/2" for ::1 at 2016-06-22 08:58:35 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"3+r7rrq4nzP/d5aawAOeXuFH7JHy6KGJQIntP3PeyTfmoJTQUNL7vBywyPfSkwCvIqo/wPiXG1a9Qzjz0ucwjw==", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 11], ["venue_id", 2], ["created_at", "2016-06-22 15:58:35.619330"], ["updated_at", "2016-06-22 15:58:35.619330"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 68ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/users/11" for ::1 at 2016-06-22 08:58:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mVenue Load (0.6ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 08:58:47 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVenue Load (0.6ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered venues/show.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (10.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 64ms (Views: 51.4ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/venues/11" for ::1 at 2016-06-22 08:58:52 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"ZLQXjW+9NMeusmDkjDcO9OucC7ouS7/EnVlgOW6nWT1d/njzhddQSE11Pomep5AFKHHY6yQ0BRtgk7X1z56ghQ==", "id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 11], ["venue_id", 11], ["created_at", "2016-06-22 15:58:52.217399"], ["updated_at", "2016-06-22 15:58:52.217399"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 11ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/11" for ::1 at 2016-06-22 08:58:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mVenue Load (0.5ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/venues/117" for ::1 at 2016-06-22 08:59:20 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"117"}
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 117]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Venue with 'id'=117):
+  app/controllers/venues_controller.rb:23:in `show'
+
+
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.1ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (96.4ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (217.5ms)
+
+
+Started GET "/venues/17" for ::1 at 2016-06-22 08:59:25 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mVenue Load (0.6ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 17]]
+  Rendered venues/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/venues/17" for ::1 at 2016-06-22 08:59:28 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"vez1+f8yJFTX8nXx+h/4flRFqC5ZuSAs3ZtfkHEXwIWEppqHFVhA2zQ1K5zoj2aPl6h7f1PGmvMgUYpc0C45PQ==", "id"=>"17"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["venue_id", 17], ["created_at", "2016-06-22 15:59:28.398645"], ["updated_at", "2016-06-22 15:59:28.398645"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 14ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/users/11" for ::1 at 2016-06-22 08:59:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mVenue Load (0.5ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/11" for ::1 at 2016-06-22 09:01:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 92ms (Views: 69.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:01:08 -0700
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:01:16 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered venues/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/Users/emiliogomezlavin/Developer/wdi-labs/open-mic/app/views/venues/show.html.erb:23: syntax error, unexpected ')', expecting '='
+...( u.first_name , u.last_name  );@output_buffer.safe_append='...
+...                               ^
+/Users/emiliogomezlavin/Developer/wdi-labs/open-mic/app/views/venues/show.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/emiliogomezlavin/Developer/wdi-labs/open-mic/app/views/venues/show.html.erb:27: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/emiliogomezlavin/Developer/wdi-labs/open-mic/app/views/venues/show.html.erb:29: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/venues/show.html.erb:23: syntax error, unexpected ')', expecting '='
+  app/views/venues/show.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+  app/views/venues/show.html.erb:27: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/venues/show.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/venues_controller.rb:24:in `show'
+
+
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.8ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (94.8ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (210.7ms)
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:01:24 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (11.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:01:24 -0700
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:01:40 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:40 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:01:40 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:40 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:01:40 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:01:40 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:01:40 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:01:41 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:41 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:41 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:01:41 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:01:41 -0700
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:02:01 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:02:02 -0700
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:02:11 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:12 -0700
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:02:19 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (4.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:02:20 -0700
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:02:33 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:02:33 -0700
+
+
+Started GET "/venues/17" for ::1 at 2016-06-22 09:02:39 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mVenue Load (0.7ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 17]]
+  Rendered venues/show.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/venues/18" for ::1 at 2016-06-22 09:02:47 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mVenue Load (0.2ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 18]]
+  Rendered venues/show.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/venues/18" for ::1 at 2016-06-22 09:02:51 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"hffA5SHHb/tBO1j7OilOvsZJmD7QQAMqQx7sefS1qvy8va+by60LdKL8BpYoudBPBaRLb9o/ufW+1Dm1VYxTRA==", "id"=>"18"}
+  [1m[35mUser Load (7.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mVenue Load (1.9ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35m (3.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["venue_id", 18], ["created_at", "2016-06-22 16:02:51.242539"], ["updated_at", "2016-06-22 16:02:51.242539"]]
+  [1m[35m (3.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 33ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/users/11" for ::1 at 2016-06-22 09:02:51 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/venues/18" for ::1 at 2016-06-22 09:02:57 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 18]]
+  Rendered venues/show.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/venues/18" for ::1 at 2016-06-22 09:03:00 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 18]]
+  Rendered venues/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:03:00 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:03:00 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:03:00 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:03:00 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:03:00 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:03:00 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:03:01 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:03:01 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:03:01 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:03:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:03:01 -0700
+
+
+Started DELETE "/sessions" for ::1 at 2016-06-22 09:03:04 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TryNzGXcAPewQHDSBfimTU9FgFU0g6QkQtNFXfwz/0539uKyj7ZkeFOHLr8XaDi8jKhTBD78Hvu/GZCRXQoG9g=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-22 09:03:04 -0700
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/sign_in" for ::1 at 2016-06-22 09:03:35 -0700
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"FrTKy8hFbHHtiDjpfVe6cYo0Me6xtixHkV43gnarviwv/qW1Ii8I/g5PZoRvxySASdniv7vJlphslOJO15JHlA=="}
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2016-06-22 09:03:43 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SZHAUH2U1LkRTbTi3ETYB3r/paaOzaeM+7PK73oVkDlw268ul/6wNvKK6o/O1Eb2uRJ294SyHVMGeR8j2yxpgQ==", "user"=>{"email"=>"ken@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "ken@gmail.com"]]
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 99ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/20" for ::1 at 2016-06-22 09:03:43 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 20]]
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/venues/20" for ::1 at 2016-06-22 09:03:59 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 20]]
+  Rendered venues/show.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/venues/20" for ::1 at 2016-06-22 09:04:02 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"Ro5jg/ESCPyX9NtjtoJJ7ukG0VIeWX13sqloV+sZkxh/xAz9G3hsc3QzhQ6kEtcfKusCAxQmx6hPY72bSiBqoA==", "id"=>"20"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mVenue Load (1.0ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 20], ["venue_id", 20], ["created_at", "2016-06-22 16:04:02.469015"], ["updated_at", "2016-06-22 16:04:02.469015"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 14ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users/20" for ::1 at 2016-06-22 09:04:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 20]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/venues/20" for ::1 at 2016-06-22 09:04:08 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mVenue Load (1.4ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mUser Load (10.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 20]]
+  Rendered venues/show.html.erb within layouts/application (13.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+Completed 200 OK in 48ms (Views: 34.0ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:04:17 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/venues/11" for ::1 at 2016-06-22 09:04:19 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"9il0sNkSv2shyaHYSH96Ol0/l627/HwPSCPHA6K6g77PYxvOM3jb5MIO/7Va7+TLntJE/LGDxtC16RLPA4N6Bg==", "id"=>"11"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mVenue Load (1.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 20], ["venue_id", 11], ["created_at", "2016-06-22 16:04:19.761918"], ["updated_at", "2016-06-22 16:04:19.761918"]]
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 16ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/users/20" for ::1 at 2016-06-22 09:04:19 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 20]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 09:04:22 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/venues/17" for ::1 at 2016-06-22 09:04:32 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 17]]
+  Rendered venues/show.html.erb within layouts/application (3.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/venues/17" for ::1 at 2016-06-22 09:04:35 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"nfx3CAPG7sITltUcR/W81hdLpHpEYVxycdfwp/w4Ifakthh26ayKTfBRi3FVZSIn1KZ3K04e5q2MHSVrXQHYTg==", "id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mVenue Load (0.2ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 20], ["venue_id", 17], ["created_at", "2016-06-22 16:04:35.820159"], ["updated_at", "2016-06-22 16:04:35.820159"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 11ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/users/20" for ::1 at 2016-06-22 09:04:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 20]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/venues/17" for ::1 at 2016-06-22 09:04:45 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 17]]
+  Rendered venues/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 20]]
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/venues/17" for ::1 at 2016-06-22 09:04:49 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 17]]
+  Rendered venues/show.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-22 09:04:49 -0700
+
+
+Started DELETE "/sessions" for ::1 at 2016-06-22 10:55:53 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5DjtheqXmVh8zvznQ1xqIdQHRPWVwWX4z51jdLe0ZjrdcoL7AP39158JoopRzPTQF+qXpJ++3ycyV7a4Fo2fgg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-22 10:55:53 -0700
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 212ms (Views: 209.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-22 10:55:57 -0700
+Processing by UsersController#new as HTML
+  Parameters: {"authenticity_token"=>"iTHfkKwS5sbK1OMHqsbgVl/+4cyqdSx7evF5YL/dBIewe7DuRniCSSkTvWq4Vn6nnBMynaAKlqSHO6ysHuT9Pw=="}
+  Rendered users/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 72ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-06-22 10:56:09 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wae+z4nqS8m87d3ooeejWy7fjDytuwlCdIJ1EzA/tOX47dGxY4AvRl8qg4Wzdz2q7TJfbafEs52JSKDfkQZNXQ==", "user"=>{"profile_pic"=>"", "first_name"=>"", "last_name"=>"", "age"=>"", "email"=>"kabah@gmail.com", "password"=>"[FILTERED]", "current_city"=>"", "description"=>""}, "commit"=>"Sign Up"}
+  [1m[36m (3.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "profile_pic", "description", "current_city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["first_name", ""], ["last_name", ""], ["email", "kabah@gmail.com"], ["password_digest", "$2a$10$mUEPaxHdjjROB7Yr6uaPAOkAoIuCrACE4PmSPkQsAqQ2JGsNxtrjy"], ["profile_pic", ""], ["description", ""], ["current_city", ""], ["created_at", "2016-06-22 17:56:09.271576"], ["updated_at", "2016-06-22 17:56:09.271576"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 212ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/users/22" for ::1 at 2016-06-22 10:56:09 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mVenue Load (0.5ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 22]]
+  Rendered users/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 70ms (Views: 63.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/22/edit" for ::1 at 2016-06-22 10:56:13 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  Rendered users/edit.html.erb within layouts/application (6.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/users/22" for ::1 at 2016-06-22 10:56:21 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k1B0CFDx6FDk0tzT1M1YVPqnTjjvDfAkAKagemmwXcOqGht2upuM3wcVgr7GXcalOUqdaeVySvv9bHW2yImkew==", "user"=>{"profile_pic"=>"", "first_name"=>"Kabah", "last_name"=>"Conda", "age"=>"", "email"=>"kabah@gmail.com", "password"=>"[FILTERED]", "current_city"=>"", "description"=>""}, "commit"=>"Edit", "id"=>"22"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "first_name" = $1, "last_name" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["first_name", "Kabah"], ["last_name", "Conda"], ["updated_at", "2016-06-22 17:56:21.143441"], ["id", 22]]
+  [1m[35m (4.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 33ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/users/22" for ::1 at 2016-06-22 10:56:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mVenue Load (2.5ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 22]]
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 63ms (Views: 55.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-22 10:56:30 -0700
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (1.1ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."id" DESC
+  Rendered venues/index.html.erb within layouts/application (24.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+Completed 200 OK in 99ms (Views: 95.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/images/url" for ::1 at 2016-06-22 10:56:30 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/url"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (255.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (154.0ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (301.4ms)
+
+
+Started GET "/images/a" for ::1 at 2016-06-22 10:56:31 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/a"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.0ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (194.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (205.2ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (366.9ms)
+
+
+Started GET "/venues/42" for ::1 at 2016-06-22 10:56:32 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 42]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 42]]
+  Rendered venues/show.html.erb within layouts/application (45.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 102ms (Views: 99.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/venues/42" for ::1 at 2016-06-22 10:56:36 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"qN2BxmPghguDRjPjEuah0q+Xwigw9qqlWztCoDFBlHaRl+64iYrihGCBbY4Adj8jbHoReTqJEHqm8ZdskHhtzg==", "id"=>"42"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mVenue Load (0.2ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 42]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 22], ["venue_id", 42], ["created_at", "2016-06-22 17:56:36.268898"], ["updated_at", "2016-06-22 17:56:36.268898"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 13ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/users/22" for ::1 at 2016-06-22 10:56:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mVenue Load (0.5ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 22]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/venues/42" for ::1 at 2016-06-22 10:56:44 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 42]]
+  Rendered venues/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+Completed 200 OK in 86ms (Views: 83.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions" for ::1 at 2016-06-22 11:40:24 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p4fXgXfwxiYZHNc64VMqb/5gDGGE2AzN3higppJsO8eezbj/nZqiqfrbiVfzw7SePY3fMI6nthIj0nVqM1XCfw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-22 11:40:24 -0700
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-22 11:40:27 -0700
+Processing by UsersController#new as HTML
+  Parameters: {"authenticity_token"=>"RJn5H6UC5TzNbDtoj0HnZZGoTZyXxezoX4NLq+Vwqwp905ZhT2iBsy6rZQWd0XmUUkWezZ26VjeiSZ5nRElSsg=="}
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-06-22 11:40:50 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/WUjzFtT4RO3fkidhuGlLkLUVD1jaEsJHsS33nx41RrEL0yysTmFnFS5FvCUcTvfgTmHbGkX8dbjDmIS3UEsog==", "user"=>{"profile_pic"=>"", "first_name"=>"Min", "last_name"=>"Kim", "age"=>"", "email"=>"min@kim.com", "password"=>"[FILTERED]", "current_city"=>"", "description"=>""}, "commit"=>"Sign Up"}
+  [1m[35m (4.7ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "profile_pic", "description", "current_city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Min"], ["last_name", "Kim"], ["email", "min@kim.com"], ["password_digest", "$2a$10$ma4Y3hU3V7DHhQnhM4/7KexQC1tcbz968U.kApacLUXUa3SpWTQ.G"], ["profile_pic", ""], ["description", ""], ["current_city", ""], ["created_at", "2016-06-22 18:40:50.478603"], ["updated_at", "2016-06-22 18:40:50.478603"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/23
+Completed 302 Found in 106ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/users/23" for ::1 at 2016-06-22 11:40:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 23]]
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 74ms (Views: 68.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-22 11:40:56 -0700
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (1.3ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."id" DESC
+  Rendered venues/index.html.erb within layouts/application (20.3ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/images/url" for ::1 at 2016-06-22 11:40:56 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/url"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (85.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (190.6ms)
+
+
+Started GET "/images/a" for ::1 at 2016-06-22 11:40:57 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/a"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/emiliogomezlavin/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (136.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (94.0ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/emiliogomezlavin/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (206.4ms)
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 11:40:59 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 23]]
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/venues/11" for ::1 at 2016-06-22 11:41:07 -0700
+Processing by UsersController#visit as HTML
+  Parameters: {"authenticity_token"=>"6v97S5O8MtAF8cAhOSSdV4ew7SvhlFlTajb/Efg7kofTtRQ1edZWX+Y2nkwrtAOmRF0+euvr44yX/CrdWQJrPw==", "id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mVenue Load (0.2ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "visits" ("user_id", "venue_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 23], ["venue_id", 11], ["created_at", "2016-06-22 18:41:07.452215"], ["updated_at", "2016-06-22 18:41:07.452215"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/23
+Completed 302 Found in 12ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/23" for ::1 at 2016-06-22 11:41:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mUser Load (6.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mVenue Load (1.4ms)[0m  SELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1  [["user_id", 23]]
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 48ms (Views: 33.8ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/venues/11" for ::1 at 2016-06-22 11:41:16 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 11]]
+  Rendered venues/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.9ms)

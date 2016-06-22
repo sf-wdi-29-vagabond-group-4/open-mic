@@ -5,9 +5,15 @@ class UsersController < ApplicationController
   end
 
   def index
-    binding.pry
     @users = User.all
     render :index
+  end
+
+  def visit
+    @user = current_user
+    @venue = Venue.find(params[:id])
+    @user.venues.push(@venue)
+    redirect_to @user
   end
 
   def new
