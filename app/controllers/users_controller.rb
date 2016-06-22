@@ -27,7 +27,8 @@ class UsersController < ApplicationController
       login(@user)
       redirect_to "/users/#{@user.id}"
     else
-      redirect_to new_users_path
+      flash[:error] = "Email is already in use."
+      redirect_to sign_in_path
     end
   end
 

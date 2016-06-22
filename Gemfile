@@ -52,3 +52,5 @@ gem 'awesome_print', require: 'ap'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 gem 'faker'
+
+gem "twitter-bootstrap-rails"
