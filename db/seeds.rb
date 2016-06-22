@@ -12,20 +12,6 @@ require "faker"
 
 User.destroy_all
 
-# 10.times do
-#   u = User.new
-#   u.first_name = Faker::Name.first_name
-#   u.last_name = Faker::Name.last_name
-#   u.email = Faker::Internet.free_email
-#   u.password = "12345"
-#   u.description = Faker::Lorem.paragraph(4)
-#   u.current_city = Faker::Address.city
-#   u.age = Faker::Number.between(13, 100)
-#   u.profile_pic = Faker::Placeholdit.image
-#   u.save
-# end
-Faker::Config.locale = 'en-US'
-
 10.times do
   v = Venue.new
   v.name = Faker::Company.name
@@ -53,3 +39,16 @@ end
   v.profile_pic = Faker::Placeholdit.image
   v.save
 end
+
+# 10.times do
+#   u = User.new
+#   u.first_name = Faker::Name.first_name
+#   u.last_name = Faker::Name.last_name
+#   u.email = Faker::Internet.free_email
+#   u.password = "12345"
+#   u.description = Faker::Lorem.paragraph(4)
+#   u.current_city = Faker::Address.city
+#   u.age = Faker::Number.between(13, 100)
+#   u.profile_pic = Faker::Placeholdit.image
+#   u.save
+# end
