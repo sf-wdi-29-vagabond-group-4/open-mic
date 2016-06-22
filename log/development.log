@@ -3543,3 +3543,1938 @@ Processing by UsersController#show as HTML
   [1m[36mVenue Load (0.9ms)[0m  [1mSELECT "venues".* FROM "venues" INNER JOIN "visits" ON "venues"."id" = "visits"."venue_id" WHERE "visits"."user_id" = $1[0m  [["user_id", 12]]
   Rendered users/show.html.erb within layouts/application (41.3ms)
 Completed 200 OK in 60ms (Views: 55.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-06-21 19:03:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 405ms (Views: 392.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:04:01 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.7ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."id" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (11.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 36ms (Views: 29.6ms | ActiveRecord: 1.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mVenue Load (0.7ms)[0m  SELECT "venues".* FROM "venues"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 9]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 13]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 15]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 17]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "venues" WHERE "venues"."id" = $1  [["id", 19]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "venues" WHERE "venues"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Dicki LLC"], ["street_one", "3241 Tromp Land"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 19915], ["phone_number", 415], ["email", "imani@yahoo.com"], ["description", "Qui nulla voluptatem numquam. Accusantium optio sed et itaque facilis omnis. Quia ducimus sint ad et. Voluptas praesentium ducimus voluptas. Veritatis ratione voluptatem beatae error vel modi. Atque dolores explicabo esse rerum eveniet."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.626807"], ["updated_at", "2016-06-22 02:06:09.626807"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Dach, Gottlieb and Gibson"], ["street_one", "5053 Kyler Bypass"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 19135], ["phone_number", 415], ["email", "toby_feil@yahoo.com"], ["description", "Error aut harum aut velit eveniet voluptatem laborum. Quibusdam fuga repudiandae non. Qui odit nobis rem. Rerum sit et necessitatibus. Rerum nostrum et repellendus sapiente quia accusamus omnis. Officia quidem debitis."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.633948"], ["updated_at", "2016-06-22 02:06:09.633948"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Bartell and Sons"], ["street_one", "73549 Lynch Plains"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 62937], ["phone_number", 415], ["email", "verner@gmail.com"], ["description", "Dignissimos eos omnis nam. Autem ad vel facilis omnis. Vel earum animi rem expedita facilis sint. Nobis officiis deleniti. Porro ut occaecati. Ut et quidem dolor aut blanditiis eum nisi."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.639126"], ["updated_at", "2016-06-22 02:06:09.639126"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Schmitt-Will"], ["street_one", "789 Leopoldo Crest"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 21222], ["phone_number", 415], ["email", "patsy.borer@yahoo.com"], ["description", "Dolorem minima eos repudiandae debitis enim cum sit. Magni beatae hic. In exercitationem quis pariatur est iusto commodi. Optio aut et aut sed. Non qui unde modi laboriosam voluptas porro."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.644983"], ["updated_at", "2016-06-22 02:06:09.644983"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Orn-O'Hara"], ["street_one", "93461 Gerlach Heights"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 30307], ["phone_number", 415], ["email", "jerel@yahoo.com"], ["description", "Quia voluptas ut id qui. Maiores voluptatem repellat expedita aut provident. Est consequatur excepturi dolorem asperiores dolorum accusamus eos. Nostrum aliquid qui. Laborum pariatur illo sapiente aliquam omnis. Ut voluptatem accusantium aut ut libero impedit."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.650065"], ["updated_at", "2016-06-22 02:06:09.650065"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Hartmann, Ryan and Hoppe"], ["street_one", "2580 Khalil Spur"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 11392], ["phone_number", 415], ["email", "jolie_gusikowski@hotmail.com"], ["description", "Facere quaerat perferendis tempore expedita magni. Id dolor pariatur omnis sunt qui deleniti commodi. Aperiam vero assumenda maxime deserunt consequatur. Natus in quasi et nisi. Eos sunt id. Ea sed aliquam nostrum."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.662260"], ["updated_at", "2016-06-22 02:06:09.662260"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Altenwerth-Mann"], ["street_one", "9165 Greenfelder Heights"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 65540], ["phone_number", 415], ["email", "roman.murphy@yahoo.com"], ["description", "Porro consequuntur excepturi dignissimos incidunt. Qui esse aliquid id inventore autem mollitia quo. Saepe velit commodi. Hic laboriosam incidunt quia accusamus dolorem. Ipsam eveniet fugiat ut et reprehenderit. Accusamus quod laborum occaecati."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.670615"], ["updated_at", "2016-06-22 02:06:09.670615"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Williamson, Kautzer and Connelly"], ["street_one", "34559 Considine Fort"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 23498], ["phone_number", 415], ["email", "arnaldo@yahoo.com"], ["description", "Corporis eligendi non qui. Ducimus et quibusdam id amet. Alias similique ut esse ea beatae. Doloremque nihil esse rerum eveniet aut atque. Cum hic error et nam. Ducimus non quibusdam inventore."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.677119"], ["updated_at", "2016-06-22 02:06:09.677119"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Abernathy Inc"], ["street_one", "19989 Ima Inlet"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 63897], ["phone_number", 415], ["email", "pedro@gmail.com"], ["description", "Ut sed numquam non eum. Dolorem qui rerum molestiae excepturi quam possimus. Voluptate deserunt ut alias saepe doloremque ea. Fugit consequuntur saepe et. Adipisci sed quae labore et est sed vel."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.683588"], ["updated_at", "2016-06-22 02:06:09.683588"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Spinka-Cronin"], ["street_one", "97532 Maybell Greens"], ["city", "San Francisco"], ["state", "CA"], ["zipcode", 95467], ["phone_number", 415], ["email", "maximus.weber@yahoo.com"], ["description", "Excepturi distinctio cupiditate. Sint eum quae quia consectetur quo distinctio. Aliquam error fugiat quam et nulla voluptates nemo. Ut quo laudantium vero voluptate. Incidunt dolorem sunt itaque voluptatem non explicabo exercitationem. Numquam molestiae unde."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.690030"], ["updated_at", "2016-06-22 02:06:09.690030"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Hilll-Williamson"], ["street_one", "1898 Andrew Extensions"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 53275], ["phone_number", 312], ["email", "alvis@gmail.com"], ["description", "Consequuntur corporis sequi facere eligendi itaque iste similique. Dolore laudantium quam. Accusamus dolor omnis vitae aliquam. Tenetur cum autem. Fuga alias sint. Velit eligendi reprehenderit illo occaecati."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.698024"], ["updated_at", "2016-06-22 02:06:09.698024"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Hamill-Rau"], ["street_one", "3459 Smitham Valleys"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 42148], ["phone_number", 312], ["email", "nyah@gmail.com"], ["description", "Quia totam veritatis ipsa rerum perspiciatis accusantium. Dolores ad odit voluptatibus enim. Occaecati distinctio recusandae illo natus. Fugiat et a velit consequatur id reprehenderit. A pariatur voluptas quia."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.703235"], ["updated_at", "2016-06-22 02:06:09.703235"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Christiansen, Dibbert and Bartoletti"], ["street_one", "95101 Ernser Green"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 88212], ["phone_number", 312], ["email", "kattie.cronin@gmail.com"], ["description", "Magnam nulla repudiandae. Officia suscipit ipsa earum fugit vel ratione ab. Nostrum et in dicta. Adipisci ea fugiat labore tempore. Distinctio qui pariatur sed tempore eum. Ipsam consectetur optio repellendus."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.709647"], ["updated_at", "2016-06-22 02:06:09.709647"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Kirlin-Kuhlman"], ["street_one", "2374 Weissnat Place"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 10241], ["phone_number", 312], ["email", "jo.ruel@hotmail.com"], ["description", "Et accusamus voluptas. Minima in sunt vero exercitationem dicta distinctio totam. Voluptatem illo dolor hic placeat ut rem debitis. Maxime ipsum et quia neque eaque. Molestiae repudiandae et voluptatem. Similique deserunt officiis excepturi dolor est."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.716796"], ["updated_at", "2016-06-22 02:06:09.716796"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Effertz-Breitenberg"], ["street_one", "26406 Creola Curve"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 89511], ["phone_number", 312], ["email", "kenny@hotmail.com"], ["description", "Doloribus tenetur est maxime molestiae et. Quibusdam saepe rerum unde repellat velit. Quo fugit laudantium commodi quia. Et quisquam eos officiis ipsa illum aut. Blanditiis omnis eum quaerat consequatur pariatur et."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.722487"], ["updated_at", "2016-06-22 02:06:09.722487"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Kulas-Friesen"], ["street_one", "4153 Katrine Parks"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 44519], ["phone_number", 312], ["email", "jaycee@hotmail.com"], ["description", "Ut in et quo nesciunt voluptatem dolorem. Earum aspernatur eius fugiat consequuntur excepturi omnis esse. Laboriosam repudiandae dolor consectetur aut est. Occaecati quis suscipit consequatur dolor."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.728620"], ["updated_at", "2016-06-22 02:06:09.728620"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Zboncak LLC"], ["street_one", "6820 Jeanne Island"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 44110], ["phone_number", 312], ["email", "allen_schmidt@yahoo.com"], ["description", "Repudiandae mollitia nostrum pariatur aut. Quidem quod recusandae dolores magnam delectus non. Sint quod et rerum vel amet. Quis quia sequi dolor autem aut perferendis blanditiis. Minus pariatur inventore minima non autem."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.734335"], ["updated_at", "2016-06-22 02:06:09.734335"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Bradtke, Jerde and O'Keefe"], ["street_one", "9197 Carmel Junction"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 32214], ["phone_number", 312], ["email", "maxime.feest@gmail.com"], ["description", "Rerum nam quibusdam. Quia rerum rerum vel impedit unde corporis. Nihil quod et corrupti veritatis. Excepturi id quos quod est qui. Ipsa sunt distinctio vitae nihil. Consequatur illum et neque laborum expedita dicta provident."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.741545"], ["updated_at", "2016-06-22 02:06:09.741545"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "Schmitt-Rice"], ["street_one", "76011 Sawayn Street"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 85586], ["phone_number", 312], ["email", "donavon@yahoo.com"], ["description", "Quis eos laboriosam temporibus et in. Aperiam voluptates maiores rerum est earum qui. Asperiores tenetur voluptas animi quis cum. Id fugit nesciunt et. Deserunt veritatis vel recusandae nam similique et."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.748656"], ["updated_at", "2016-06-22 02:06:09.748656"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "venues" ("name", "street_one", "city", "state", "zipcode", "phone_number", "email", "description", "profile_pic", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Ankunding-Prosacco"], ["street_one", "7832 Nicolas Landing"], ["city", "Chicago"], ["state", "IL"], ["zipcode", 91576], ["phone_number", 312], ["email", "jody@yahoo.com"], ["description", "Qui ut hic inventore voluptatem. Aut eum perspiciatis dolor doloribus quos sunt pariatur. Velit iste iusto a rerum quis. Rerum accusamus sed eveniet rem suscipit sequi cupiditate. Sunt minima et totam quia illum est eos. Temporibus quo consequuntur qui cum omnis est."], ["profile_pic", "https://placehold.it/300x300.png/000"], ["created_at", "2016-06-22 02:06:09.754668"], ["updated_at", "2016-06-22 02:06:09.754668"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:06:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (0.8ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."id" DESC
+  Rendered venues/index.html.erb within layouts/application (22.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 237ms (Views: 218.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:06:18 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:21:12 -0700
+Processing by VenuesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/minkim/open-mic/app/models/venue.rb:11: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/models/venue.rb:11: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/venues_controller.rb:4:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (371.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (430.4ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:21:35 -0700
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (0.3ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Venue with 'id'=all):
+  app/models/venue.rb:9:in `search'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.4ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:23:09 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Venue with 'id'=all):
+  app/models/venue.rb:9:in `search'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.6ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.2ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:28:39 -0700
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (0.5ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (28.6ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (undefined method `sumbit_tag' for #<#<Class:0x007fb6395e8660>:0x007fb6395f0d38>
+Did you mean?  submit_tag):
+    2: <% form_tag venues_path do %>
+    3:   <p>
+    4:     <%= text_field_tag :search %>
+    5:     <%= sumbit_tag "Search" %>
+    6:   <p>
+    7: <% end %>
+    8: 
+  app/views/venues/index.html.erb:5:in `block in _app_views_venues_index_html_erb__2365345309823699960_70210270839740'
+  app/views/venues/index.html.erb:2:in `_app_views_venues_index_html_erb__2365345309823699960_70210270839740'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.8ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:28:55 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (23.8ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `subit_tag' for #<#<Class:0x007fb6395e8660>:0x007fb63aac3ad0>
+Did you mean?  submit_tag):
+    2: <% form_tag venues_path do %>
+    3:   <p>
+    4:     <%= text_field_tag :search %>
+    5:     <%= subit_tag "Search" %>
+    6:   <p>
+    7: <% end %>
+    8: 
+  app/views/venues/index.html.erb:5:in `block in _app_views_venues_index_html_erb__2365345309823699960_70210322568020'
+  app/views/venues/index.html.erb:2:in `_app_views_venues_index_html_erb__2365345309823699960_70210322568020'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.9ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:29:01 -0700
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (0.6ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:29:01 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:29:02 -0700
+
+
+Started GET "/venues/21" for ::1 at 2016-06-21 19:29:59 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 21]]
+  Rendered venues/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:30:01 -0700
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (3.0ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (22.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 61ms (Views: 56.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:33:40 -0700
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `to_model' for #<Venue::ActiveRecord_Relation:0x007fb6358c4888>
+Did you mean?  to_xml):
+    1: <h1>Venues</h1>
+    2: 
+    3: <% form_tag @venues do %>
+    4:   <p>
+    5:     <%= text_field_tag :search %>
+    6:     <%= submit_tag "Search" %>
+  app/views/venues/index.html.erb:3:in `_app_views_venues_index_html_erb__2365345309823699960_70210279521060'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.5ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:34:58 -0700
+Processing by VenuesController#index as HTML
+  Rendered venues/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+    2: 
+    3: <% form_tag venues_path do %>
+    4:   <p>
+    5:     <%= text_field :search %>
+    6:     <%= submit "Search" %>
+    7:   <p>
+    8: <% end %>
+  app/views/venues/index.html.erb:5:in `block in _app_views_venues_index_html_erb__2365345309823699960_70210312849200'
+  app/views/venues/index.html.erb:3:in `_app_views_venues_index_html_erb__2365345309823699960_70210312849200'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.2ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:35:19 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (6.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:35:19 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:37:13 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:37:13 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:37:27 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (3.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:37:28 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:37:54 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:37:54 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:38:13 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:38:13 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:38:37 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:38:37 -0700
+
+
+Started GET "/venues/21" for ::1 at 2016-06-21 19:38:38 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mVenue Load (0.6ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  Rendered venues/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:38:39 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (1.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (15.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:38:52 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:38:52 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:39:05 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:39:05 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:39:26 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (4.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:39:27 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:42:19 -0700
+Processing by VenuesController#index as HTML
+  Rendered venues/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/minkim/open-mic/app/views/venues/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+'.freeze; form_tag ('/venues', method: "get") do 
+                              ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+'.freeze; form_tag ('/venues', method: "get") do 
+                                             ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/venues/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+  app/views/venues/index.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+  app/views/venues/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.9ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:44:14 -0700
+Processing by VenuesController#index as HTML
+  Rendered venues/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/minkim/open-mic/app/views/venues/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+...r.append=  form_tag ("/venues", method: "get") do @output_bu...
+...                               ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+..._tag ("/venues", method: "get") do @output_buffer.safe_appen...
+...                               ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/venues/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+  app/views/venues/index.html.erb:3: syntax error, unexpected ')', expecting keyword_end
+  app/views/venues/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.2ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:45:38 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:45:38 -0700
+
+
+Started POST "/venues" for ::1 at 2016-06-21 19:45:45 -0700
+Processing by VenuesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vAqtRFvCdIJwwjpcTjy+cpG9HMIMD2e5iHSdahu5TvxL7jvsu5dH5VyoaQcHKzxIxRZBPHGL+0OLk26Jq+Z6qg==", "search"=>"", "commit"=>"Search"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: venue):
+  app/controllers/venues_controller.rb:30:in `venue_params'
+  app/controllers/venues_controller.rb:14:in `create'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.4ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:47:11 -0700
+Processing by VenuesController#index as HTML
+  Rendered venues/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/minkim/open-mic/app/views/venues/index.html.erb:3: syntax error, unexpected keyword_do_block
+...rm_tag "/venues", :method => do @output_buffer.safe_append='
+...                               ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/venues/index.html.erb:3: syntax error, unexpected keyword_do_block
+  app/views/venues/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.8ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:47:32 -0700
+Processing by VenuesController#index as HTML
+  Rendered venues/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/minkim/open-mic/app/views/venues/index.html.erb:3: syntax error, unexpected keyword_do_block
+...rm_tag "/venues", :method => do @output_buffer.safe_append='
+...                               ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/venues/index.html.erb:3: syntax error, unexpected keyword_do_block
+  app/views/venues/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.8ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:47:46 -0700
+Processing by VenuesController#index as HTML
+  Rendered venues/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/minkim/open-mic/app/views/venues/index.html.erb:3: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+...  form_tag "/venues", :method "get" => do @output_buffer.saf...
+...                               ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:3: syntax error, unexpected =>, expecting keyword_end
+...tag "/venues", :method "get" => do @output_buffer.safe_appen...
+...                               ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/venues/index.html.erb:3: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  app/views/venues/index.html.erb:3: syntax error, unexpected =>, expecting keyword_end
+  app/views/venues/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.7ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 19:48:11 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:48:11 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco&commit=Search" for ::1 at 2016-06-21 19:48:20 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco", "commit"=>"Search"}
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco&commit=Search" for ::1 at 2016-06-21 19:50:30 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco", "commit"=>"Search"}
+  Rendered venues/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/minkim/open-mic/app/views/venues/index.html.erb:5: syntax error, unexpected tSTRING_DEND, expecting ']'
+...ld_tag :search, params[:search});@output_buffer.safe_append='
+...                               ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/minkim/open-mic/app/views/venues/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/minkim/open-mic/app/views/venues/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/venues/index.html.erb:5: syntax error, unexpected tSTRING_DEND, expecting ']'
+  app/views/venues/index.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+  app/views/venues/index.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/venues/index.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.5ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco&commit=Search" for ::1 at 2016-06-21 19:50:44 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco", "commit"=>"Search"}
+  [1m[36mVenue Load (0.4ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:50:44 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco&commit=Search" for ::1 at 2016-06-21 19:50:45 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco", "commit"=>"Search"}
+  [1m[36mVenue Load (0.6ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco&commit=Search" for ::1 at 2016-06-21 19:51:45 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco", "commit"=>"Search"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (30.7ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0x007fb6395e8660>:0x007fb639078ea0>):
+    3: <%= form_tag "/venues", :method => 'get' do %>
+    4:   <p>
+    5:     <%= text_field_tag :search, params[:search]%>
+    6:     <%= submit_tag "Search", name => nil %>
+    7:   <p>
+    8: <% end %>
+    9: 
+  app/views/venues/index.html.erb:6:in `block in _app_views_venues_index_html_erb__2365345309823699960_70210308726020'
+  app/views/venues/index.html.erb:3:in `_app_views_venues_index_html_erb__2365345309823699960_70210308726020'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.2ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco&commit=Search" for ::1 at 2016-06-21 19:51:54 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco", "commit"=>"Search"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 19:51:54 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 19:51:55 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 19:55:24 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `search' for #<Class:0x007fb639e065b8>):
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.0ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 19:57:30 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `params' for #<Class:0x007fb6394783e8>):
+  app/models/venue.rb:6:in `search'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.7ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 19:58:59 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."id" IN (NULL, NULL)
+Completed 404 Not Found in 8ms (ActiveRecord: 1.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Venues with 'id': (all, {:conditions=>["city LIKE ?", "%search"]}) (found 0 results, but was looking for 2)):
+  app/models/venue.rb:7:in `search'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.7ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:00:32 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[36mVenue Load (0.3ms)[0m  [1mSELECT "venues".* FROM "venues" WHERE "venues"."id" IN (NULL, NULL)[0m
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Venues with 'id': (all, {:conditions=>["city LIKE ?", "%search"]}) (found 0 results, but was looking for 2)):
+  app/models/venue.rb:7:in `search'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.6ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.9ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:01:42 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  app/models/venue.rb:7:in `search'
+  app/controllers/venues_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.5ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:04:42 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (17.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:04:42 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:04:42 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:04:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 20:04:42 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 20:04:42 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 20:04:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 20:04:43 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:04:43 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:04:43 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:04:43 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 20:04:43 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:04:47 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:05:33 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/minkim/open-mic/app/models/venue.rb:11: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/models/venue.rb:11: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/venues_controller.rb:4:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.8ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:05:41 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 20:05:41 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:05:42 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (1.2ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:05:50 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.9ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 20:05:50 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:15:48 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 20:15:48 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:16:31 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:16:48 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.5ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:18:04 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.7ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (13.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 48ms (Views: 41.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 20:18:04 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:18:06 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:20:01 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:20:08 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:25:32 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (1.6ms)[0m  SELECT "venues".* FROM "venues" WHERE (city LIKE '%San Fransisco')
+  Rendered venues/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 20:25:32 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:25:33 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues" WHERE (city LIKE '%San Fransisco')
+  Rendered venues/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:25:52 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "San Fransisco"]]
+  Rendered venues/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 95585ms (Views: 46.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 20:27:28 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:27:36 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "San Fransisco"]]
+  Rendered venues/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Fransisco" for ::1 at 2016-06-21 20:27:38 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Fransisco"}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "San Fransisco"]]
+  Rendered venues/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Francisco" for ::1 at 2016-06-21 20:28:02 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Francisco"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "San Francisco"]]
+  Rendered venues/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:28:12 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "Chicago"]]
+  Rendered venues/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=" for ::1 at 2016-06-21 20:29:02 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", ""]]
+  Rendered venues/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=" for ::1 at 2016-06-21 20:29:26 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"
+  Rendered venues/index.html.erb within layouts/application (12.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-21 20:29:26 -0700
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:29:44 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "Chicago"]]
+  Rendered venues/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=" for ::1 at 2016-06-21 20:29:48 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues"
+  Rendered venues/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-21 20:37:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (0.8ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (19.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 228ms (Views: 210.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=chicago" for ::1 at 2016-06-21 20:37:40 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"chicago"}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "chicago"]]
+  Rendered venues/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:37:47 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "Chicago"]]
+  Rendered venues/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=San+Francisco" for ::1 at 2016-06-21 20:38:01 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"San Francisco"}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "San Francisco"]]
+  Rendered venues/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=" for ::1 at 2016-06-21 20:38:08 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues"
+  Rendered venues/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=" for ::1 at 2016-06-21 20:38:10 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mVenue Load (0.4ms)[0m  SELECT "venues".* FROM "venues"
+  Rendered venues/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.6ms)

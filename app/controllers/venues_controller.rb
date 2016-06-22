@@ -1,7 +1,11 @@
 class VenuesController < ApplicationController
 
   def index
-    @venues = Venue.all.order(id: :desc)
+    if params[:search] != nil
+      @venues = Venue.search(params[:search])
+    else
+      @venues = Venue.all.order(city: :desc)
+    end
     render :index
   end
 
