@@ -11,3 +11,6 @@
   <li> <%= @venue.description %></li>
   <li> <%= @venue.profile_pic %></li>
 </ul>
+
+<%= button_to "Edit", edit_venue_path(@venue), :method => :get %>
+<%= button_to "Delete", @venue, :method => :delete %>

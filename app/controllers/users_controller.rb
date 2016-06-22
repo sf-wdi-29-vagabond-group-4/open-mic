@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
-  
+
   def home
       render :home
   end
 
   def index
+    binding.pry
     @users = User.all
     render :index
   end
@@ -43,6 +44,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
     redirect_to @user
+  end
+
+  def delete
+    @user = User.find(params[:id])
+    session.delete(:user_id)
+    @user.destroy
+    redirect_to "/venues"
   end
 
   private
