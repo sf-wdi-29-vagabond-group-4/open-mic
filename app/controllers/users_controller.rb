@@ -52,11 +52,11 @@ class UsersController < ApplicationController
     redirect_to @user
   end
 
-  def delete
+  def destroy
     @user = User.find(params[:id])
     session.delete(:user_id)
     @user.destroy
-    redirect_to "/venues"
+    redirect_to "/"
   end
 
   private
