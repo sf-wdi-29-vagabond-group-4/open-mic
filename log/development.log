@@ -8628,3 +8628,29 @@ Processing by VenuesController#show as HTML
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
 Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.9ms)
 >>>>>>> delete
+
+
+Started GET "/" for ::1 at 2016-06-22 11:49:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 230ms (Views: 218.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/venues" for ::1 at 2016-06-22 11:49:10 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.9ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (10.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/venues/81" for ::1 at 2016-06-22 11:49:13 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mVenue Load (0.2ms)[0m  [1mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1[0m  [["id", 81]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1  [["venue_id", 81]]
+  Rendered venues/show.html.erb within layouts/application (30.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 1.6ms)
