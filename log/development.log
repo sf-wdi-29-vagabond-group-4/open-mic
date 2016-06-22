@@ -5947,3 +5947,21 @@ ORDER BY c.conname
   [1m[35mVenue Load (0.4ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."city" = $1 LIMIT 1  [["city", "Chicago"]]
   [1m[36mVenue Load (0.5ms)[0m  [1mSELECT "venues".* FROM "venues"[0m
 >>>>>>> d3a79dd67d4cb1bdc7bd3a68341c4d1e2cda6ec0
+
+
+Started GET "/venues" for ::1 at 2016-06-21 20:45:11 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (0.8ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (22.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 231ms (Views: 210.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/venues?utf8=%E2%9C%93&search=Chicago" for ::1 at 2016-06-21 20:45:17 -0700
+Processing by VenuesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Chicago"}
+  [1m[35mVenue Load (0.2ms)[0m  SELECT "venues".* FROM "venues" WHERE "venues"."city" = $1  [["city", "Chicago"]]
+  Rendered venues/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.5ms)
