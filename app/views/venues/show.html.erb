@@ -1,3 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"><%= @venue.name %></div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4" id="search_bar">Search Bar Goes Here</div>
+  </div>
+  <div class="row" id="venue_info">
+    <div class="col-sm-4">
+      <img src="<%= @venue.profile_pic %>" alt="venue profile pic">
+    </div>
+      <div class="col-sm-4">
+        <ul>
+  <li>Address: <%= @venue.street_one %></li>
+  <li> <%= @venue.street_two %></li>
+  <li>City: <%= @venue.city %></li>
+  <li>State: <%= @venue.state %></li>
+  <li>Zip: <%= @venue.zipcode %></li>
+  <li>Phone: <%= @venue.phone_number %></li>
+  <li>Email: <%= @venue.email %></li>
+</ul>
+      </div>
+    <div class="col-sm-4"></div>
+  </div>
+
+  <div class="row" id="buttons">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1"><%= button_to "Edit", edit_user_path(@user), :method => :get %></div>
+    <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete %></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" id="user_description">Description: <%= @venue.description %></div>
+  </div>
+
+  <div class="row" id="show_information">
+    <div class="col-sm-4">
+      <h3>Map</h3>
+      <p>IPhone chicharrones seitan hoodie, man braid master cleanse scenester swag. Four dollar toast flannel gentrify yr YOLO, jean shorts man bun VHS single-origin coffee craft beer bitters flexitarian bicycle rights ramps. Lomo occupy forage jean shorts butcher vegan. Austin migas tacos blog, paleo thundercats you probably haven't heard of them. Keffiyeh 8-bit pour-over chartreuse beard crucifix. Asymmetrical blue bottle venmo twee, messenger bag fap you probably haven't heard of them master cleanse before they sold out williamsburg. Godard chicharrones offal, iPhone microdosing paleo distillery swag yuccie occupy blog cardigan migas 8-bit butcher.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Reviews</h3>
+       <p>Everyday carry chambray gochujang, occupy synth gastropub small batch. Portland asymmetrical literally, disrupt williamsburg farm-to-table dreamcatcher. Venmo street art next level austin. Slow-carb cardigan crucifix venmo, tote bag quinoa normcore green juice retro pinterest man braid messenger bag post-ironic. Heirloom photo booth vice, thundercats yuccie sustainable tilde deep v authentic salvia bushwick. Flexitarian authentic bushwick typewriter, fanny pack pickled kogi gochujang drinking vinegar chia mixtape ennui dreamcatcher literally umami. Church-key pork belly direct trade narwhal, try-hard 90's single-origin coffee chicharrones fashion axe squid.</p>
+    </div>
+    <div class="col-sm-4">
+       <h3>Followers</h3>
+       <p>IPhone chicharrones seitan hoodie, man braid master cleanse scenester swag. Four dollar toast flannel gentrify yr YOLO, jean shorts man bun VHS single-origin coffee craft beer bitters flexitarian bicycle rights ramps. Lomo occupy forage jean shorts butcher vegan. Austin migas tacos blog, paleo thundercats you probably haven't heard of them. Keffiyeh 8-bit pour-over chartreuse beard crucifix. Asymmetrical blue bottle venmo twee, messenger bag fap you probably haven't heard of them master cleanse before they sold out williamsburg. Godard chicharrones offal, iPhone microdosing paleo distillery swag yuccie occupy blog cardigan migas 8-bit butcher.</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 <h1> <%= @venue.name %></h1>
 
 <%= button_to "Save Venue", new_visit_path(@venue), :method => :post %>

@@ -1,20 +1,62 @@
-<div>Welcome, <%= @user.first_name %>, <%= @user.last_name %></div>
-  <div>Current city: <%= @user.current_city %></div>
-  <div>Join date: <%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %></div>
-  <img src="<%= @user.profile_pic %>"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">Welcome, <%= @user.first_name %> <%= @user.last_name %>!</div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4" id="search_bar">Search Bar Goes Here</div>
+  </div>
+  <div class="row" id="user_info">
+    <div class="col-sm-4">
+      <img src="<%= @user.profile_pic %>" alt="user profile pic">
+    </div>
+    <div class="col-sm-4">
+      <ul>
+          <li>Current city: <%= @user.current_city %></li>
+          <li>Join date: <%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %></li>
+          <li>Age: <%= @user.age %></li>
+          <li>Email: <%= @user.email %></li>
+        </ul>
+    </div>
+      <div class="col-sm-4">
+      </div>
+  </div>
 
-<%= button_to "Edit", edit_user_path(@user), :method => :get %>
-<%= button_to "Delete", @user, :method => :delete %>
+  <div class="row" id="buttons">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1"><%= button_to "Edit", edit_user_path(@user), :method => :get %></div>
+    <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete %></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" id="user_description">Description: <%= @user.description %></div>
+  </div>
 
-  <% @user.venues.each do |v| %>
-  <ul>
-  	<li>
-  		<%= v.name %>
-  	</li>
-  	<li>
-  		<%= v.city %>
-  	</li>
-  </ul>
+  <div class="row" id="show_information">
+    <div class="col-sm-4">
+      <h3>Venues</h3>
+      <div>
+    <% @user.venues.each do |v| %>
+    <ul>
+      <li>
+        <%= v.name %>
+      </li>
+      <li>
+        <%= v.city %>
+      </li>
+    </ul>
+
   <% end %>
+  </div>
+      <p>IPhone chicharrones seitan hoodie, man braid master cleanse scenester swag. Four dollar toast flannel gentrify yr YOLO, jean shorts man bun VHS single-origin coffee craft beer bitters flexitarian bicycle rights ramps. Lomo occupy forage jean shorts butcher vegan. Austin migas tacos blog, paleo thundercats you probably haven't heard of them. Keffiyeh 8-bit pour-over chartreuse beard crucifix. Asymmetrical blue bottle venmo twee, messenger bag fap you probably haven't heard of them master cleanse before they sold out williamsburg. Godard chicharrones offal, iPhone microdosing paleo distillery swag yuccie occupy blog cardigan migas 8-bit butcher.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Followers</h3>
+       <p>Everyday carry chambray gochujang, occupy synth gastropub small batch. Portland asymmetrical literally, disrupt williamsburg farm-to-table dreamcatcher. Venmo street art next level austin. Slow-carb cardigan crucifix venmo, tote bag quinoa normcore green juice retro pinterest man braid messenger bag post-ironic. Heirloom photo booth vice, thundercats yuccie sustainable tilde deep v authentic salvia bushwick. Flexitarian authentic bushwick typewriter, fanny pack pickled kogi gochujang drinking vinegar chia mixtape ennui dreamcatcher literally umami. Church-key pork belly direct trade narwhal, try-hard 90's single-origin coffee chicharrones fashion axe squid.</p>
+    </div>
+    <div class="col-sm-4">
+       <h3>Following</h3>
+       <p>IPhone chicharrones seitan hoodie, man braid master cleanse scenester swag. Four dollar toast flannel gentrify yr YOLO, jean shorts man bun VHS single-origin coffee craft beer bitters flexitarian bicycle rights ramps. Lomo occupy forage jean shorts butcher vegan. Austin migas tacos blog, paleo thundercats you probably haven't heard of them. Keffiyeh 8-bit pour-over chartreuse beard crucifix. Asymmetrical blue bottle venmo twee, messenger bag fap you probably haven't heard of them master cleanse before they sold out williamsburg. Godard chicharrones offal, iPhone microdosing paleo distillery swag yuccie occupy blog cardigan migas 8-bit butcher.</p>
+    </div>
+    </div>
+  </div>
+</div>
 
 
