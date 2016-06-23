@@ -24,7 +24,9 @@
 
   <div class="row" id="buttons">
     <div class="col-sm-1"></div>
-    <div class="col-sm-1"><%= button_to "Edit", edit_user_path(@user), :method => :get %></div>
+    <div class="col-sm-1">
+      <%= button_to "Edit", edit_user_path, :method => :get %>
+    </div>
     <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete %></div>
   </div>
   <div class="row">
