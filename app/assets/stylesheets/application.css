@@ -11,9 +11,18 @@
  * file per style scope.
  *
  *= require bootstrap.min
+ *= require rails_bootstrap_forms
  *= require venues
  *= require_self
  */
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .container {
   margin: 35px;
@@ -67,5 +76,13 @@ a {
 }
 
 #home_info {
+  margin-bottom: 25px;
+}
+
+#map {
+  height:
+}
+
+#venues {
   margin-bottom: 25px;
 }

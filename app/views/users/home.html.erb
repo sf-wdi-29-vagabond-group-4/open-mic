@@ -12,7 +12,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" data-src="/images/music.jpg" alt="First slide">
+          <div class="first-slide"><%= image_tag("music.jpg", :alt => "music image") %></div>
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" data-src="../images/venue.jpg" alt="Second slide">
+          <div class="second-slide"><%= image_tag("comedy.jpg", :alt => "music image") %></div>
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
@@ -32,7 +32,8 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="/images/comedy.jpg">
+          <div class="third-slide"><%= image_tag("music1.jpg", :alt => "music image") %></div>
+
           <div class="container">
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
@@ -51,11 +52,14 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
+    <div class="row">
+      <div class="col-sm-4"><h3>Featured Venues</h3></div>
+    </div>
     <div class="row" id="home_info">
-      <div class="col-sm-4">
-        <img src="app/assets/images/music.jpg">
+      <div class="col-sm-5">
+        <%= image_tag("venues.jpg", :alt => "featured venue") %>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <p>Irony lo-fi +1, waistcoat cold-pressed squid drinking vinegar man braid literally tattooed dreamcatcher. Swag sartorial four dollar toast, kinfolk tacos kale chips microdosing cred sriracha schlitz brooklyn marfa fixie pitchfork. Waistcoat paleo bicycle rights, austin tacos synth artisan flannel retro XOXO forage. Ugh gluten-free salvia knausgaard paleo waistcoat. You probably haven't heard of them skateboard cray hella, fap wayfarers dreamcatcher affogato tote bag thundercats street art cornhole knausgaard mumblecore. Bicycle rights ennui hoodie tattooed godard crucifix, roof party cronut lo-fi fixie fingerstache whatever hella vice put a bird on it. Umami bicycle rights next level, hoodie yr PBRB truffaut tofu mumblecore brunch fingerstache.
 
 </p>
