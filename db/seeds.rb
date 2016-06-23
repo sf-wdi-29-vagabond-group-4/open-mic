@@ -12,7 +12,7 @@ require "faker"
 
 
 Venue.destroy_all
-User.destroy_all
+# User.destroy_all
 10.times do
   v = Venue.new
   v.name = Faker::Company.name
