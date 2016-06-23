@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :venues
   resources :users
 
+  get "/venues/city/:city", to: "venues#city", as: "city"
+
   get "/sign_in", to: "sessions#new"
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy", as: "delete"

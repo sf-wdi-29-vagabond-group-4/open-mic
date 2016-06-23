@@ -28,6 +28,11 @@ class VenuesController < ApplicationController
     render :show
   end
 
+  def city
+    @venue = Venue.where(city: params[:city])
+    render :_city
+  end
+
   def edit
     @venue = Venue.find(params[:id])
     render :edit
