@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160623184454) do
 
   # These are extensions that must be enabled in order to support this database
@@ -57,6 +56,9 @@ ActiveRecord::Schema.define(version: 20160623184454) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "admin_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "full_address"
   end
 
   create_table "visits", force: :cascade do |t|

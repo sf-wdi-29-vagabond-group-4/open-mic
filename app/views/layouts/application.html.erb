@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  <nav class="teal">
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Destinations</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <% if current_user %>
-        <li>Welcome <%= current_user.first_name %> </li>
-        <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Sign in", sign_in_path, method: :get%></li>
-        <li><%= link_to "Sign up", new_user_path, method: :get%></li>
-      <% end %>
-      </ul>
-    </div>
-  </nav>
+
+  <!-- Adds Google Maps API CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg&libraries=places"></script>
+
+
   <title>Destinations</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -24,9 +15,12 @@
 </head>
 <body>
 
-<%= bootstrap_flash %>
-<%= yield %>
+  <%= render "header" %>
+
+  <%= bootstrap_flash %>
+
+  <%= yield %>
+
 
 </body>
 </html>
-        

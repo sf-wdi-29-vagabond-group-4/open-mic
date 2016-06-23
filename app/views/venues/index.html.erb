@@ -8,6 +8,7 @@
 	    <%= submit_tag "Search", :name => nil %>
 	<% end %>
 </div>
+<div class="map"></div>
 <div>
 	<% @venues.each do |venue| %>
 		<ul>
@@ -21,3 +22,9 @@
 		</ul>
 	<% end %>
 </div>
+
+<script type="text/javascript">
+  var venues = [<%= raw @venues.to_json %>];
+	allVenuesMap(venues)
+</script>
+
