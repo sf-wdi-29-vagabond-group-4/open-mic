@@ -29,11 +29,9 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
-<<<<<<< HEAD
     @current_user_id = current_user.id
-=======
     @comments = @venue.comments.order(id: :asc)
->>>>>>> comments
+
     render :show
   end
 

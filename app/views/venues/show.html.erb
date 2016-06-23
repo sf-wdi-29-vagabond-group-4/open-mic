@@ -1,6 +1,5 @@
 <h1> <%= @venue.name %></h1>
 <% if current_user != nil %>
-<%= button_to "Save Venue", new_visit_path(@venue), :method => :post %>
 <% end %>
 
 <ul>
@@ -14,6 +13,7 @@
   <li> <%= @venue.description %></li>
   <li> <%= image_tag @venue.profile_pic %></li>
 </ul>
+<%= button_to "Follow Venue", new_visit_path(@venue), :method => :post %>
 
 <%= button_to "Edit", edit_venue_path(@venue), :method => :get %>
 <% if @current_user_id == @venue.admin_id %>

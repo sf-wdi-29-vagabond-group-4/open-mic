@@ -1,3 +1,6 @@
+<% if current_user.admin %>
+<h1> Welcome, admin</h1>
+<% end %>
 <h1>Venues</h1>
 <div>
 	<%= form_tag "/venues", :method => 'get' do %>
@@ -11,6 +14,10 @@
 			<li><%= link_to venue.name, venue %></li>
 			<li><%= venue.city %></li>
 			<li><%= link_to image_tag(venue.profile_pic), venue %></li>
+			<% if current_user.admin %>
+		      <%= button_to "Edit", edit_venue_path(venue), :method => :get %>
+		      <%= button_to "Delete", venue, :method => :delete %>
+		    <% end %>
 		</ul>
 	<% end %>
 </div>

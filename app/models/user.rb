@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   has_many :visits, dependent: :destroy
   has_many :venues, through: :visits
   
-  # validates :first_name, :last_name, :description, :age, :email, :current_city, :password, confirmation: true, presence: true
-  # validates :email_confirmation, :password_confirmation, presence: true
+  validates :first_name, :last_name, :description, :age, :email, :current_city, :password, confirmation: true, presence: true
+  validates :email_confirmation, :password_confirmation, presence: true
   validates :email, uniqueness: true
 
   has_secure_password
