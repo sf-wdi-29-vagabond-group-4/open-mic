@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
   has_many :visits, dependent: :destroy
   has_many :venues, through: :visits
-  has_secure_password
-  validates :email, presence: true, uniqueness: true
+  
+  # validates :first_name, :last_name, :description, :age, :email, :current_city, :password, confirmation: true, presence: true
+  # validates :email_confirmation, :password_confirmation, presence: true
+  validates :email, uniqueness: true
 
+  has_secure_password
   def self.confirm(params)
     @user = User.find_by({email: params[:email]})
     @user.try(:authenticate, params[:password])

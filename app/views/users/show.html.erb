@@ -3,8 +3,10 @@
   <div>Join date: <%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %></div>
   <img src="<%= @user.profile_pic %>"></div>
 
-<%= button_to "Edit", edit_user_path(@user), :method => :get %>
-<%= button_to "Delete", @user, :method => :delete %>
+<% if current_user == @user || @user.admin %>
+  <%= button_to "Edit", edit_user_path(@user), :method => :get %>
+  <%= button_to "Delete", @user, :method => :delete %>
+<% end %>
 
   <h3>Venues I Follow</h3>
   <hr>

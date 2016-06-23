@@ -8,7 +8,7 @@
       <a href="/" class="brand-logo">Destinations</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       <% if current_user %>
-        <li>Hey <%= current_user.first_name %>! Ready to rock?! </li>
+        <li>Welcome <%= current_user.first_name %> </li>
         <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "Sign in", sign_in_path, method: :get%></li>
@@ -23,7 +23,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%if current_user.admin %>
+"YOU ARE AN ADMIN"
+<% end %>
+<%= bootstrap_flash %>
 <%= yield %>
 
 </body>

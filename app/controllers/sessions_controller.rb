@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+  # before_action :require_login, except: [:new]
   # skip_before_filter :require_login
 
   def new
@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
       login(@user)
       redirect_to "/users/#{@user.id}"
     else
+      flash[:error] = 'Invalid email/password combination'
       redirect_to sign_in_path
     end
   end

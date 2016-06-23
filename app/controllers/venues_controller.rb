@@ -1,4 +1,5 @@
 class VenuesController < ApplicationController
+before_action :require_login, only: [:show]
 
   def index
     if params[:search] != nil
@@ -15,6 +16,7 @@ class VenuesController < ApplicationController
   end
 
   def create
+    params[:venue][:admin_id] = current_user.id
     @venue = Venue.new(venue_params)
     if @venue.save
       redirect_to @venue
@@ -25,6 +27,7 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
+    @current_user_id = current_user.id
     render :show
   end
 
@@ -47,7 +50,7 @@ class VenuesController < ApplicationController
 
   private
   def venue_params
-    params.require(:venue).permit(:name, :street_one, :street_two, :city, :state, :zipcode, :phone_number, :email, :description, :profile_pic)
+    params.require(:venue).permit(:name, :street_one, :street_two, :city, :state, :zipcode, :phone_number, :email, :description, :profile_pic, :admin_id)
   end
 
 end
