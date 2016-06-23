@@ -15,8 +15,16 @@
   <div>
     <%= f.text_field :email, placeholder: "Email" %>
   </div>
+
+  <div>
+    <%= f.text_field :email_confirmation, placeholder: "Email Confirmation" %>
+  </div>
+
   <div>
     <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+  <div>
+    <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
   </div>
   <div>
     <%= f.text_field :current_city, placeholder: "Current City" %>

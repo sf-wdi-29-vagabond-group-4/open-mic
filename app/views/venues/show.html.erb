@@ -1,6 +1,7 @@
 <h1> <%= @venue.name %></h1>
-
+<% if current_user != nil %>
 <%= button_to "Save Venue", new_visit_path(@venue), :method => :post %>
+<% end %>
 
 <ul>
   <li> <%= @venue.street_one %></li>
@@ -15,7 +16,9 @@
 </ul>
 
 <%= button_to "Edit", edit_venue_path(@venue), :method => :get %>
-<%= button_to "Delete", @venue, :method => :delete %>
+<% if @current_user_id == @venue.admin_id %>
+  <%= button_to "Delete", @venue, :method => :delete %>
+<% end %>
 <br>
 <br>
 <h4>Users</h4>
@@ -25,3 +28,5 @@
     <%= u.first_name + ' ' + u.last_name  %>
   </li>
 <% end %>
+
+

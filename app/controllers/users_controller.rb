@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_action :require_login
+before_action :require_login, only: [:index, :edit] 
   def home
       render :home
   end
@@ -25,10 +25,10 @@ before_action :require_login
     @user = User.new(user_params)
     if @user.save
       login(@user)
+      flash[:success] = "Welcome to Open-Mic!"
       redirect_to "/users/#{@user.id}"
     else
-      flash[:error] = "Email is already in use."
-      redirect_to sign_in_path
+      redirect_to new_user_path, flash: {error: @user.errors.full_messages.to_sentence}
     end
   end
 
@@ -62,7 +62,7 @@ before_action :require_login
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :age, :profile_pic, :description, :current_city)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :age, :profile_pic, :description, :current_city, :email_confirmation, :password_confirmation)
   end
 
 end
