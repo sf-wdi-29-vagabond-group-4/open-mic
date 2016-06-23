@@ -13575,3 +13575,4 @@ WHERE c.contype = 'f'
 ORDER BY c.conname
 
   [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
