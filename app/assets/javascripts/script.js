@@ -1,11 +1,28 @@
 console.log("linked papi!!!!");
 
 var map;
-function initMap(lat, long) {
+var allVenues;
+function allVenuesMap(venues) {
+  // for (i=0; )
+  // var myLatLng = {lat: lat, lng: long};
+  // var map = new google.maps.Map(document.getElementById('map'), {
+  //   zoom: 18,
+  //   center: myLatLng
+  // });
+  //
+  // var marker = new google.maps.Marker({
+  //   position: myLatLng,
+  //   map: map,
+  //   title: 'Venue'
+  // });
+}
+
+
+function venueMap(lat, long) {
   var myLatLng = {lat: lat, lng: long};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
+    zoom: 18,
     center: myLatLng
   });
 
