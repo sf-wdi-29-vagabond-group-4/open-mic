@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   delete "/sessions", to: "sessions#destroy", as: "delete"
 
   post '/venues/:id', to: "users#visit", as: "new_visit"
+  post '/venues/:id/comments', to: "venues#comment", as: "comment"
 
 end
