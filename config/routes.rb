@@ -1,16 +1,23 @@
 Rails.application.routes.draw do
   root to: "users#home"
 
-  resources :venues
+  resources :venues do
+    resources :comments
+  end
   resources :users
 
-  get "/venues/city/:city", to: "venues#city", as: "city"
-
+  #sign in routes
   get "/sign_in", to: "sessions#new"
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy", as: "delete"
 
+  #city routes
+  get "/venues/city/:city", to: "venues#city", as: "city"
+  
+  #visit routes
   post '/venues/:id', to: "users#visit", as: "new_visit"
-  post '/venues/:id/comments', to: "venues#comment", as: "comment"
+
+  #comment routes
+  # post '/venues/:id/comments', to: "comments#create", as: "new_comment"
 
 end
