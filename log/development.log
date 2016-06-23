@@ -38078,3 +38078,287 @@ Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde4
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-06-23 12:43:40 -0700
+
+
+Started GET "/users" for ::1 at 2016-06-23 13:36:41 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"  ORDER BY "users"."id" DESC
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-23 13:36:41 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2016-06-23 13:36:42 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2016-06-23 13:36:42 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2016-06-23 13:36:42 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2016-06-23 13:36:42 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2016-06-23 13:36:42 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-23 13:36:42 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-23 13:36:44 -0700
+Processing by VenuesController#index as HTML
+  [1m[36mVenue Load (0.5ms)[0m  [1mSELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC[0m
+  Rendered venues/index.html.erb within layouts/application (9.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/venues/1" for ::1 at 2016-06-23 13:36:49 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mVenue Load (0.2ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered venues/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/Users/minkim/open-mic/app/views/venues/show.html.erb:18: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...ppend=( if current_user.admin );@output_buffer.safe_append='
+...                               ^
+/Users/minkim/open-mic/app/views/venues/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+ end 
+    ^
+/Users/minkim/open-mic/app/views/venues/show.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/minkim/open-mic/app/views/venues/show.html.erb:38: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/venues/show.html.erb:18: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/venues/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+  app/views/venues/show.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/venues/show.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/venues_controller.rb:31:in `show'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.0ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (100.1ms)
+
+
+Started GET "/venues/1" for ::1 at 2016-06-23 13:36:49 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mVenue Load (0.2ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered venues/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/minkim/open-mic/app/views/venues/show.html.erb:18: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...ppend=( if current_user.admin );@output_buffer.safe_append='
+...                               ^
+/Users/minkim/open-mic/app/views/venues/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+ end 
+    ^
+/Users/minkim/open-mic/app/views/venues/show.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/minkim/open-mic/app/views/venues/show.html.erb:38: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/venues/show.html.erb:18: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/venues/show.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+  app/views/venues/show.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/venues/show.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/venues_controller.rb:31:in `show'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.3ms)
+
+
+Started GET "/venues/1" for ::1 at 2016-06-23 13:37:07 -0700
+Processing by VenuesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mVenue Load (0.2ms)[0m  SELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "visits" ON "users"."id" = "visits"."user_id" WHERE "visits"."venue_id" = $1[0m  [["venue_id", 1]]
+  Rendered venues/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/venues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/venues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-06-23 13:37:08 -0700
+
+
+Started GET "/venues" for ::1 at 2016-06-23 14:04:18 -0700
+Processing by VenuesController#index as HTML
+  [1m[35mVenue Load (0.3ms)[0m  SELECT "venues".* FROM "venues"  ORDER BY "venues"."city" DESC
+  Rendered venues/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-06-23 14:04:20 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"  ORDER BY "users"."id" DESC[0m
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.5ms)
