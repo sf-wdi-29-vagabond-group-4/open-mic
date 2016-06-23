@@ -1,4 +1,6 @@
 class Venue < ActiveRecord::Base
+  has_many :comments, dependent: :destroy
+  has_many :users, through: :comments
   has_many :visits, dependent: :destroy
   has_many :users, through: :visits
 
@@ -12,4 +14,5 @@ class Venue < ActiveRecord::Base
       all
     end
   end
+
 end

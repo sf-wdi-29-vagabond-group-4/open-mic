@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :comments, dependent: :destroy
+  has_many :venues, through: :comments
   has_many :visits, dependent: :destroy
   has_many :venues, through: :visits
   
@@ -11,4 +13,5 @@ class User < ActiveRecord::Base
     @user = User.find_by({email: params[:email]})
     @user.try(:authenticate, params[:password])
   end
+
 end

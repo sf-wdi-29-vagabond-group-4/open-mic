@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-before_action :require_login, only: [:index, :edit] 
+  before_action :require_login, only: [:index, :edit] 
+  skip_before_filter :verify_authenticity_token, :only => :visit
+
   def home
       render :home
   end

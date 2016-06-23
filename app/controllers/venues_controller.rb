@@ -1,5 +1,7 @@
 class VenuesController < ApplicationController
-before_action :require_login, only: [:show]
+  before_action :require_login, only: [:show]
+  skip_before_filter :verify_authenticity_token, :only => :comment
+ 
 
   def index
     if params[:search] != nil
@@ -27,8 +29,25 @@ before_action :require_login, only: [:show]
 
   def show
     @venue = Venue.find(params[:id])
+<<<<<<< HEAD
     @current_user_id = current_user.id
+=======
+    @comments = @venue.comments.order(id: :asc)
+>>>>>>> comments
     render :show
+  end
+
+  def comment
+    @venue = Venue.find(params[:id])
+    @user = current_user
+    @comment = @user.comments.create(comment_params)
+    @venue.comments.push(@comment)
+    redirect_to @venue   
+  end
+
+  def city
+    @venue = Venue.where(city: params[:city])
+    render :_city
   end
 
   def edit
@@ -51,6 +70,10 @@ before_action :require_login, only: [:show]
   private
   def venue_params
     params.require(:venue).permit(:name, :street_one, :street_two, :city, :state, :zipcode, :phone_number, :email, :description, :profile_pic, :admin_id)
+  end
+
+  def comment_params
+    params.require(:comment).permit(:comment)
   end
 
 end
