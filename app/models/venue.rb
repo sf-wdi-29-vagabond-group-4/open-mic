@@ -1,5 +1,5 @@
 class Venue < ActiveRecord::Base
-  has_many :visits
+  has_many :visits, dependent: :destroy
   has_many :users, through: :visits
 
   geocoded_by :full_address
