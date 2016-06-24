@@ -17,8 +17,8 @@
           <li>Zip: <%= @venue.zipcode %></li>
           <li>Phone: <%= @venue.phone_number %></li>
           <li>Email: <%= @venue.email %></li>
-        <li><%= button_to "Follow Venue", new_visit_path(@venue), :method => :post %></li>
         </ul>
+        <%= button_to "Follow Venue", new_visit_path(@venue), :method => :post %>
       </div>
   </div>
 

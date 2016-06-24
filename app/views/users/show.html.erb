@@ -3,10 +3,10 @@
   <div class="row">
     <div class="col-md-6">
       <%if current_user.admin %>
-        <h3>Welcome <%= current_user.first_name %></h3>
+        <h3>Welcome <%= current_user.first_name %>!</h3>
         <h5>Admin</h5>
       <%else%>
-        Welcome, <%= @user.first_name %> <%= @user.last_name %>!
+        <h3>Welcome, <%= @user.first_name %> <%= @user.last_name %>!<h3>
       <%end%>
       <img src="<%= @user.profile_pic %>" alt="user profile pic">
     </div>
@@ -21,18 +21,19 @@
   </div>
 
   <div class="row" id="buttons">
-    <div class="col-sm-1"></div>
+    <div class="col-sm-12"></div>
     <% if current_user.admin? || current_user == @user %>
     <div class="col-sm-1"><%= button_to "Edit", edit_user_path(@user), :method => :get %></div>
     <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete, data: {confirm: 'Are you sure?'}%></div>
     <% end %>
   </div>
+
   <div class="row">
     <div class="col-sm-12" id="user_description">Description: <%= @user.description %></div>
   </div>
 
   <div class="row" id="show_information">
-    <div class="col-sm-4">
+    <div class="col-sm-12">
       <h3>Venues</h3>
       <div>
     <% @user.venues.each do |v| %>
