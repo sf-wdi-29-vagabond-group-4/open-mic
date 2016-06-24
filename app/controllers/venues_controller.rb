@@ -8,7 +8,7 @@ class VenuesController < ApplicationController
 
   def search
     @query = params[:q]
-    @venues = Venue.search(@query)
+    @venues = Venue.search(@query).order(id: :desc)
     render :index
   end
 

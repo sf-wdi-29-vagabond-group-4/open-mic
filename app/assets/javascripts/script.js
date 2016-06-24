@@ -3,18 +3,30 @@ console.log("linked papi!!!!");
 var map;
 var allVenues;
 function allVenuesMap(venues) {
-  // for (i=0; )
-  // var myLatLng = {lat: lat, lng: long};
-  // var map = new google.maps.Map(document.getElementById('map'), {
-  //   zoom: 18,
-  //   center: myLatLng
-  // });
-  //
-  // var marker = new google.maps.Marker({
-  //   position: myLatLng,
-  //   map: map,
-  //   title: 'Venue'
-  // });
+  var mapCord = {};
+  var zoom;
+  if (venues[0][0].city === "Chicago"){
+    mapCord = {lat: 41.9333926, lng: -88.0123393};
+    zoom = 10;
+  }
+  else {
+    mapCord = {lat: 37.7749, lng: -122.4194};
+    zoom = 12;
+  }
+
+  var map = new google.maps.Map(document.getElementById('mapAllVenues'), {
+    zoom: zoom,
+    center: mapCord
+  });
+
+  for (i=0; i<venues[0].length; i++){
+    var myLatLng = {lat: venues[0][i].latitude, lng: venues[0][i].longitude};
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Venue'
+    });
+  }
 }
 
 

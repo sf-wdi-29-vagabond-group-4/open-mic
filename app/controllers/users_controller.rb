@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :require_login, only: [:index, :edit] 
+  before_action :require_login, only: [:index, :edit]
+
+
 
   def home
       render :home

@@ -1,50 +1,74 @@
 <div class="container">
-  
-  <div class="row">
-    <div class="col-md-6">
-      <%if current_user.admin %>
-        <h3>Welcome <%= current_user.first_name %>!</h3>
-        <h5>Admin</h5>
-      <%else%>
-        <h3>Welcome, <%= @user.first_name %> <%= @user.last_name %>!<h3>
-      <%end%>
-      <img src="<%= @user.profile_pic %>" alt="user profile pic">
+  <div class="row" id="venues">
+    <div class="col-sm-4" id="header-search" >
+      <%= button_to "Add New Venue", new_venue_path, :method => :get, class: "btn btn-info" %>
     </div>
-    <div class="col-md-6" id="user_info">
-      <ul>
-          <li>Current city: <%= @user.current_city %></li>
-          <li>Join date: <%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %></li>
-          <li>Age: <%= @user.age %></li>
-          <li>Email: <%= @user.email %></li>
-        </ul>
+    <div class="col-sm-4">
+      Welcome, <%= @user.first_name %> <%= @user.last_name %>!
+    </div>
+    <div class="col-sm-4">
+      <div class="row">
+        <%= form_tag "/venues", :method => 'get' do %>
+        <div class="form-group col-sm-8"><%= text_field_tag :search, params[:search], class: "form-control" %></div>
+        <div class="form-group col-sm-4"><%= submit_tag "Search", :name => nil, class: "form-control" %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h1>Profile Page</h1>
+  </div>
+  <div class="line"></div>
+
+  <div class="row" id="venue_info">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3">
+      <img src="<%= @user.profile_pic %>" alt="user profile pic" class="profileImg">
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6" style="text-align: right">
+          <br><br><br><h4 class="boldh4">Current City:<br>Join Date:<br>Age:<br>Email:<br></h4>
+        </div>
+        <div class="col-sm-6">
+          <br><br><br><h4><%= @user.current_city %><br><%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %><br><%= @user.age %><br><%= @user.email %><br></h4>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="row" id="buttons">
-    <div class="col-sm-12"></div>
-    <% if current_user.admin? || current_user == @user %>
-    <div class="col-sm-1"><%= button_to "Edit", edit_user_path(@user), :method => :get %></div>
-    <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete, data: {confirm: 'Are you sure?'}%></div>
+    <% if current_user == @user || current_user.admin %>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2" style="border-right: 1px solid black">
+        <%= button_to "Edit", edit_user_path(@user), :method => :get, class: "btn btn-default" %>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">
+        <%= button_to "Delete", @user, :method => :delete, class: "btn btn-default" %>
+      </div>
     <% end %>
   </div>
 
   <div class="row">
-    <div class="col-sm-12" id="user_description">Description: <%= @user.description %></div>
+    <div class="col-sm-12" id="user_description"><b>Description:</b> <%= @user.description %></div>
+  </div>
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#">Venues</a></li>
+      <li role="presentation"><a href="#">Following</a></li>
+      <li role="presentation"><a href="#">Followers</a></li>
+    </ul>
   </div>
 
   <div class="row" id="show_information">
-    <div class="col-sm-12">
-      <h3>Venues</h3>
-      <div>
-    <% @user.venues.each do |v| %>
-    <ul>
-      <li><%= link_to image_tag(v.profile_pic), "/venues/#{v.id}" %></li>
-      <li><%= link_to v.name, "/venues/#{v.id}" %></li>
-      <li><%= v.city %></li>
-    </ul>
-  <% end %>
-  </div>
-    </div>
-    </div>
+    <% @user.venues.each do |venue| %>
+      <div class="col-sm-2">
+        <a href='/venues/<%= venue.id %>'><img src="<%= venue.profile_pic %>" class="showUserImg" ></a>
+        <a href="/venues/<%= venue.id %>"><h4 style="text-align: center"><%= venue.name %></h4></a>
+        <h4 style="text-align: center"><%= venue.city %></h4>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -1,8 +1,11 @@
 <div class="container">
+  <div>
+    <h1>Sign Up</h1>
+  </div>
+  <div class="line"></div>
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
-      <h1>Sign Up Page</h1>
 
     <%= form_for(@user) do |f| %>
       <div class="form-group">
@@ -35,10 +38,10 @@
       <div class="form-group">
         <%= f.text_area :description, placeholder: "Description", class: "form-control" %>
       </div>
-      <div class="form-group"><%= f.submit "Sign Up", class: "btn btn-default form-control" %>
-    <!-- </div> -->
-  <% end %>
-  </div>
+      <div class="form-group"><%= f.submit "Sign Up", class: "btn btn-danger form-control" %>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-sm-4"></div>
   </div>
 </div>
-

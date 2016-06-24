@@ -1,68 +1,60 @@
-<div class="container">
-    <h1>Welcome to Open Mic World Tour</h1>
-
-<!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <div class="first-slide"><%= image_tag("music.jpg", :alt => "music image") %></div>
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="second-slide"><%= image_tag("comedy.jpg", :alt => "music image") %></div>
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="third-slide"><%= image_tag("music1.jpg", :alt => "music image") %></div>
-
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="first-slide"><%= image_tag("music.jpg", :alt => "music image") %></div>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Welcome to Open Mic World Tour.</h1>
+            <p>We are a global community of music and live performance fans. Our aim is to connect performers and fans with the best live venues, featuring up-to-date information and ratings.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
           </div>
         </div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
-    <div class="row">
-      <div class="col-sm-4"><h3>Featured Venues</h3></div>
-    </div>
-    <div class="row" id="home_info">
-      <div class="col-sm-5">
-        <%= image_tag("venues.jpg", :alt => "featured venue") %>
+      <div class="item">
+        <div class="second-slide"><%= image_tag("comedy.jpg", :alt => "music image") %></div>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Organize your next performance tour.</h1>
+            <p>We make it possible for performers to select and contact venues by location and type. Open Mic makes it easy to research venues and plan a tour, either domestically or internationally.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-7">
-        <p>Irony lo-fi +1, waistcoat cold-pressed squid drinking vinegar man braid literally tattooed dreamcatcher. Swag sartorial four dollar toast, kinfolk tacos kale chips microdosing cred sriracha schlitz brooklyn marfa fixie pitchfork. Waistcoat paleo bicycle rights, austin tacos synth artisan flannel retro XOXO forage. Ugh gluten-free salvia knausgaard paleo waistcoat. You probably haven't heard of them skateboard cray hella, fap wayfarers dreamcatcher affogato tote bag thundercats street art cornhole knausgaard mumblecore. Bicycle rights ennui hoodie tattooed godard crucifix, roof party cronut lo-fi fixie fingerstache whatever hella vice put a bird on it. Umami bicycle rights next level, hoodie yr PBRB truffaut tofu mumblecore brunch fingerstache.
+      <div class="item">
+        <div class="third-slide"><%= image_tag("music1.jpg", :alt => "music image") %></div>
 
-</p>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Connect with other Fans.</h1>
+            <p>Follow other music fans, get recommendations and accurate venue reviews. Find the venues in your area and attend live music, comedy and performances tonight.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
       </div>
     </div>
-</div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- /.carousel -->
+  <div class="row">
+    <div class="col-sm-4"><h3>Featured Venues</h3></div>
+  </div>
+  <div class="row" id="home_info">
+    <div class="col-sm-5" class="indexVenueImg">
+      <%= image_tag("venues.jpg", :alt => "featured venue") %>
+    </div>
+    <div class="col-sm-7">
+      <p>Irony lo-fi +1, waistcoat cold-pressed squid drinking vinegar man braid literally tattooed dreamcatcher. Swag sartorial four dollar toast, kinfolk tacos kale chips microdosing cred sriracha schlitz brooklyn marfa fixie pitchfork. Waistcoat paleo bicycle rights, austin tacos synth artisan flannel retro XOXO forage. Ugh gluten-free salvia knausgaard paleo waistcoat. You probably haven't heard of them skateboard cray hella, fap wayfarers dreamcatcher affogato tote bag thundercats street art cornhole knausgaard mumblecore. Bicycle rights ennui hoodie tattooed godard crucifix, roof party cronut lo-fi fixie fingerstache whatever hella vice put a bird on it. Umami bicycle rights next level, hoodie yr PBRB truffaut tofu mumblecore brunch fingerstache.</p>
+    </div>
+  </div>
