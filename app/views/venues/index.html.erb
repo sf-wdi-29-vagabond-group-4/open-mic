@@ -36,16 +36,6 @@
               <ul>
                 <li class="venueName"><%= link_to venue.name, venue %></li>
                 <li class="venueCity"><%= venue.city %></li>
-                <% if current_user.admin %>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <%= button_to "Edit", edit_venue_path(venue), :method => :get, class: "btn" %>
-                    </div>
-                    <div class="col-sm-6">
-                      <%= button_to "Delete", venue, :method => :delete, class: "btn", data: {confirm: 'Are you sure?'} %>
-                    </div>
-                  </div>
-                <% end %>
               </ul>
             </div>
           </div>
