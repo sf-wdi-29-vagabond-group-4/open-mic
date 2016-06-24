@@ -15,7 +15,7 @@
   <li> <%= @venue.profile_pic %></li>
 </ul>
 
-
+  
   <%= button_to "Edit", edit_venue_path(@venue), :method => :get %>
   <% if @current_user_id == @venue.admin_id %>
     <%= button_to "Delete", @venue, :method => :delete %>

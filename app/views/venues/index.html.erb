@@ -1,3 +1,4 @@
+<% if current_user.admin %>
 <h1>Venues</h1>
 
 <%= form_tag "/venues", :method => 'get' do %>
@@ -15,4 +16,5 @@
 	</ul>
 
 
+<% end %>
 <% end %>

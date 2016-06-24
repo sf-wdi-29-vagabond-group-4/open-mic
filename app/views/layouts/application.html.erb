@@ -23,9 +23,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%if current_user.admin %>
-"YOU ARE AN ADMIN"
-<% end %>
+
 <%= bootstrap_flash %>
 <%= yield %>
 
