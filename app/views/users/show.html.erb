@@ -1,21 +1,57 @@
-<div>Welcome, <%= @user.first_name %> <%= @user.last_name %></div>
-  <div>Current city: <%= @user.current_city %></div>
-  <div>Join date: <%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %></div>
-  <img src="<%= @user.profile_pic %>"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+    Welcome, <%= @user.first_name %> <%= @user.last_name %>!
+    </div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <%= form_tag "/venues", :method => 'get' do %>
+      <div class="form-group searchButton">
+          <%= text_field_tag :search, params[:search], class: "form-control" %>
+          <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+      </div>
+      <% end %>
+  </div>
+  <div class="row" id="user_info">
+    <div class="col-sm-4">
+      <img src="<%= @user.profile_pic %>" alt="user profile pic">
+    </div>
+    <div class="col-sm-4">
+      <ul>
+          <li>Current city: <%= @user.current_city %></li>
+          <li>Join date: <%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %></li>
+          <li>Age: <%= @user.age %></li>
+          <li>Email: <%= @user.email %></li>
+        </ul>
+    </div>
+      <div class="col-sm-4">
+      </div>
+  </div>
 
-<% if current_user == @user || @user.admin %>
-  <%= button_to "Edit", edit_user_path(@user), :method => :get %>
-  <%= button_to "Delete", @user, :method => :delete %>
-<% end %>
+  <div class="row" id="buttons">
+    <div class="col-sm-1"></div>
+    <% if current_user == @user || @user.admin %>
+    <div class="col-sm-1"><%= button_to "Edit", edit_user_path(@user), :method => :get %></div>
+    <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete %></div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" id="user_description">Description: <%= @user.description %></div>
+  </div>
 
-  <h3>Venues I Follow</h3>
-  <hr>
-  <% @user.venues.each do |v| %>
-  <ul>
-  	<li><%= link_to image_tag(v.profile_pic), "/venues/#{v.id}" %></li>
-    <li><%= link_to v.name, "/venues/#{v.id}" %></li>
-  	<li><%= v.city %></li>
-  </ul>
+  <div class="row" id="show_information">
+    <div class="col-sm-4">
+      <h3>Venues</h3>
+      <div>
+    <% @user.venues.each do |v| %>
+    <ul>
+      <li><%= link_to image_tag(v.profile_pic), "/venues/#{v.id}" %></li>
+      <li><%= link_to v.name, "/venues/#{v.id}" %></li>
+      <li><%= v.city %></li>
+    </ul>
   <% end %>
-
-
+  </div>
+    </div>
+    </div>
+  </div>
+</div>

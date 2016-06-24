@@ -1,14 +1,47 @@
-<nav class="teal">
-  <div class="nav-wrapper">
-    <a href="/" class="brand-logo">Destinations</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-    <% if current_user %>
-      <li>You are logged in <%= current_user.first_name %> </li>
-      <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
-    <% else %>
-      <li><%= link_to "Sign in", sign_in_path, method: :get%></li>
-      <li><%= link_to "Sign up", new_user_path, method: :get%></li>
-    <% end %>
-    </ul>
-  </div>
+<nav class="navbar navbar-default" id="nav">
+  <div class="container-fluid" id="header">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> -->
+      <a class="navbar-brand" href="/">Open Mic World Tour</a>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- <ul class="nav navbar-nav">
+        <li class="cities">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cities<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+ -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about">About Us<span class="sr-only">(current)</span></a></li>
+        <li><a href="/contact">Contact</a></li>
+        <% if current_user %>
+          <li><%= link_to current_user.first_name, user_path(current_user) %></li>
+          <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign in", sign_in_path, method: :get%></li>
+          <li><%= link_to "Sign up", new_user_path, method: :get%></li>
+        <% end %>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
+

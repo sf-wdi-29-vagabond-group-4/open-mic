@@ -1,4 +1,4 @@
-/*
+/* Use this file
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -10,6 +10,107 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require bootstrap.min
+ *= require venues
  *= require_self
  */
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.container {
+  margin: 35px;
+}
+
+.col-sm-6 img {
+  max-width: 500px;
+}
+
+.btn.btn-danger {
+  background-color: pink;
+}
+
+.container-fluid {
+  background-color: #add8e6;
+  color: white;
+}
+
+a {
+  background-color: #add8e6;
+  color: white;
+}
+
+#user_info {
+  margin-bottom: 25px;
+}
+
+#venue_info {
+  margin-bottom: 25px;
+}
+
+#buttons {
+  margin-bottom: 25px;
+}
+
+#user_description {
+  margin-bottom: 25px;
+}
+
+#show_information {
+  border: 1px dashed black;
+}
+
+#search_bar {
+  margin-bottom: 25px;
+  border: 1px dashed black;
+}
+
+#myCarousel {
+  margin-bottom: 25px;
+}
+
+#home_info {
+  margin-bottom: 25px;
+}
+
+#map {
+  height:
+}
+
+#venues {
+  margin-bottom: 25px;
+}
+
+/*#footer {
+  width: 100%;
+  position: absolute;
+  bottom:0;
+  left:0;
+}*/
+
+.short-page {
+  height: 150px;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+}
+
+#searchButton {
+  display: inline;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.mic {
+  margin-bottom: 25px;
+}

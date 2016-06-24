@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: "users#home"
+  root to: "home#home"
+  get "/about", to: "home#about"
+  get "/contact", to: "home#contact"
 
   resources :venues do
     resources :comments
