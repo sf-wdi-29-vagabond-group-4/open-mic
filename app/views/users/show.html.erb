@@ -35,6 +35,12 @@
     <div class="col-sm-12" id="user_description">Description: <%= @user.description %></div>
   </div>
 
+
+  <ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Map</a></li>
+  <li role="presentation"><a href="#">Venues</a></li>
+  <li role="presentation"><a href="#">Followers</a></li>
+</ul>
   <div class="row" id="show_information">
     <div class="col-sm-4">
       <h3>Venues</h3>
@@ -42,32 +48,17 @@
     <% @user.venues.each do |v| %>
     <ul>
       <li>
-        <%= v.name %>
+        <%= link_to v.name, "/venues/#{v.id}"  %>
       </li>
       <li>
-        <%= v.city %>
+        <%= link_to v.city, "/venues/#{v.id}" %>
       </li>
+      <li><%= link_to image_tag(v.profile_pic), "/venues/#{v.id}" %></li>
     </ul>
 
   <% end %>
   </div>
-
-
-
-
-
-      <p>IPhone chicharrones seitan hoodie, man braid master cleanse scenester swag. Four dollar toast flannel gentrify yr YOLO, jean shorts man bun VHS single-origin coffee craft beer bitters flexitarian bicycle rights ramps. Lomo occupy forage jean shorts butcher vegan. Austin migas tacos blog, paleo thundercats you probably haven't heard of them. Keffiyeh 8-bit pour-over chartreuse beard crucifix. Asymmetrical blue bottle venmo twee, messenger bag fap you probably haven't heard of them master cleanse before they sold out williamsburg. Godard chicharrones offal, iPhone microdosing paleo distillery swag yuccie occupy blog cardigan migas 8-bit butcher.</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Followers</h3>
-       <p>Everyday carry chambray gochujang, occupy synth gastropub small batch. Portland asymmetrical literally, disrupt williamsburg farm-to-table dreamcatcher. Venmo street art next level austin. Slow-carb cardigan crucifix venmo, tote bag quinoa normcore green juice retro pinterest man braid messenger bag post-ironic. Heirloom photo booth vice, thundercats yuccie sustainable tilde deep v authentic salvia bushwick. Flexitarian authentic bushwick typewriter, fanny pack pickled kogi gochujang drinking vinegar chia mixtape ennui dreamcatcher literally umami. Church-key pork belly direct trade narwhal, try-hard 90's single-origin coffee chicharrones fashion axe squid.</p>
-    </div>
-    <div class="col-sm-4">
-       <h3>Following</h3>
-       <p>IPhone chicharrones seitan hoodie, man braid master cleanse scenester swag. Four dollar toast flannel gentrify yr YOLO, jean shorts man bun VHS single-origin coffee craft beer bitters flexitarian bicycle rights ramps. Lomo occupy forage jean shorts butcher vegan. Austin migas tacos blog, paleo thundercats you probably haven't heard of them. Keffiyeh 8-bit pour-over chartreuse beard crucifix. Asymmetrical blue bottle venmo twee, messenger bag fap you probably haven't heard of them master cleanse before they sold out williamsburg. Godard chicharrones offal, iPhone microdosing paleo distillery swag yuccie occupy blog cardigan migas 8-bit butcher.</p>
-    </div>
     </div>
   </div>
 </div>
-
-
+</div>

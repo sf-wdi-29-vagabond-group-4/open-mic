@@ -20,7 +20,7 @@ ul {
 }
 
 body {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -104,6 +104,11 @@ nav {
 
 #searchButton {
   display: inline;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 65px;
 }
 
 h2 {
