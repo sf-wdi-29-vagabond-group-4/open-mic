@@ -17,10 +17,13 @@
       <%= f.text_field :age, placeholder: "Age" %>
     </div>
     <div>
-      <%= f.text_field :email, placeholder: "Email" %>
+      <%= f.email_field :email, placeholder: "Email" %>
     </div>
     <div>
       <%= f.password_field :password, placeholder: "Password" %>
+    </div>
+    <div>
+      <%= f.password_field :password_confirmation, placeholder: "Password" %>
     </div>
     <div>
       <%= f.text_field :current_city, placeholder: "Current City" %>

@@ -20,7 +20,7 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
+    <% if current_user %>
       <li>You are logged in <%= current_user.first_name %> </li>
       <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
     <% else %>

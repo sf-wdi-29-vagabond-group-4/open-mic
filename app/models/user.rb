@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :venues, through: :visits
   
   validates :first_name, :last_name, :description, :age, :email, :current_city, :password, presence: true
-  validates :email_confirmation, :password_confirmation, presence: true
+  validates :password_confirmation, presence: true
   validates :email, uniqueness: true
 
   has_secure_password
