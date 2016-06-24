@@ -13,7 +13,7 @@
 
 	    <% if current_user.admin %>
 	      <%= button_to "Edit", edit_user_path(user), :method => :get %>
-	      <%= button_to "Delete", user, :method => :delete %>
+	      <%= button_to "Delete", user, :method => :delete, data: {confirm: 'Are you sure?'} %>
 	    <% end %>
 	</ul>
 <% end %>

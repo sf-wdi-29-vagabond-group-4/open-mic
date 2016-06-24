@@ -2,11 +2,13 @@ class VenuesController < ApplicationController
   before_action :require_login, only: [:show]
 
   def index
-    if params[:search] != nil
-      @venues = Venue.search(params[:search])
-    else
-      @venues = Venue.all.order(city: :desc)
-    end
+    @venues = Venue.all.order(city: :desc)
+    render :index
+  end
+
+  def search
+    @query = params[:q]
+    @venues = Venue.search(@query)
     render :index
   end
 

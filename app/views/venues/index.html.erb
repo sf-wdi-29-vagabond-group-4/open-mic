@@ -11,9 +11,9 @@
       </div>
 
       <div class="col-lg-6">
-        <%= form_tag "/venues", :method => 'get' do %>
+        <%= form_tag search_venues_path, method: :get do %>
         <p>
-        <%= text_field_tag :search, params[:search]%>
+        <%= text_field_tag :q, @query%>
         <%= submit_tag "Search", :name => nil %>
         <p>
         <% end %>
@@ -29,8 +29,8 @@
             <li><%= venue.name %></li>
             <li><%= venue.city %></li>
             <% if current_user.admin %>
-              <%= button_to "Edit", edit_venue_path(venue), :method => :get %>
-              <%= button_to "Delete", venue, :method => :delete %>
+              <%= button_to "Edit", edit_venue_path(venue), method: :get %>
+              <%= button_to "Delete", venue, :method => :delete, data: {confirm: 'Are you sure?'} %>
             <% end %>
           </ul>
         </div>

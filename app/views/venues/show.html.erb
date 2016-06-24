@@ -5,10 +5,10 @@
     <div class="col-sm-4" id="search_bar">Search Bar Goes Here</div>
   </div>
   <div class="row" id="venue_info">
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <img src="<%= @venue.profile_pic %>" alt="venue profile pic">
     </div>
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <ul>
           <li>Address: <%= @venue.street_one %></li>
           <li> <%= @venue.street_two %></li>
@@ -20,7 +20,6 @@
         <li><%= button_to "Follow Venue", new_visit_path(@venue), :method => :post %></li>
         </ul>
       </div>
-    <div class="col-sm-4"></div>
   </div>
 
   <div class="row" id="buttons">
@@ -29,7 +28,7 @@
       <%= button_to "Edit", edit_venue_path, :method => :get %>
     </div>
     <div class="col-sm-1">
-      <%= button_to "Delete", @venue, :method => :delete %></div>
+      <%= button_to "Delete", @venue, :method => :delete, data: {confirm: 'Are you sure?'} %></div>
   </div>
   <div class="row">
     <div class="col-sm-12" id="user_description">Description: <%= @venue.description %></div>
@@ -53,11 +52,6 @@
 </div>
 
 
-
-
-
-
-
 <h3>Comments</h3>
 <hr>
 <div>
@@ -75,9 +69,9 @@
     <h5>-<%= c.user.first_name %></h5>
     <h6 class="media-heading"><i class="fa fa-clock-o"></i> <%= c.created_at.localtime.strftime('%I:%M%p %a %b %d, %Y') %></h6>
     
-    <% if current_user.admin %>
+    <% if current_user.admin? || current_user.id == c.user_id %>
           <%= button_to "Edit", "/venues/#{c.venue.id}/comments/#{c.id}/edit", :method => :get %>
-          <%= button_to "Delete", "/venues/#{c.venue.id}/comments/#{c.id}", :method => :delete %>
+          <%= button_to "Delete", "/venues/#{c.venue.id}/comments/#{c.id}", :method => :delete, data: {confirm: 'Are you sure?'} %>
         <% end %>
   <% end %>
 </div>

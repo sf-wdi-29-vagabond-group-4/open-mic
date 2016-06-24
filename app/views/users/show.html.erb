@@ -30,9 +30,9 @@
 
   <div class="row" id="buttons">
     <div class="col-sm-1"></div>
-    <% if current_user == @user || @user.admin %>
+    <% if current_user.admin? || current_user == @user %>
     <div class="col-sm-1"><%= button_to "Edit", edit_user_path(@user), :method => :get %></div>
-    <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete %></div>
+    <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete, data: {confirm: 'Are you sure?'}%></div>
     <% end %>
   </div>
   <div class="row">

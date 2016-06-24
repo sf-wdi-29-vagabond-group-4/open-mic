@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :venues do
     resources :comments
+    get 'search', on: :collection
   end
   resources :users
 

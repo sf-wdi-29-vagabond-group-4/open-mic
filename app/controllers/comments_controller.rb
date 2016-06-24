@@ -23,7 +23,7 @@ class CommentsController < VenuesController
   def update
     comment = Comment.find(params[:id])
     comment.update_attributes(comment_params)
-    redirect_to "/venues/#{comment.id}"
+    redirect_to "/venues/#{comment.venue.id}"
   end
 
   def comment_params

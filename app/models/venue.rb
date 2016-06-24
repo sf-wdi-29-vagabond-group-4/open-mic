@@ -6,17 +6,25 @@ class Venue < ActiveRecord::Base
 
 
   validates :name, length: {minimum: 1, maximum: 200, message: " Name must be between 1 and 200 characters"}
-  validates :street_one,:city,:state,:zipcode,:phone_number,:description , presence: true
+  validates :street_one,:city,:state,:zipcode, presence: true
+  validate :check_phone_number 
 
   geocoded_by :full_address
   after_validation :geocode #:if => :full_address_changed? #fetches the coordinates
 
 
-  def self.search(search)
-    if search.length > 0
-      return where({city: search})
-    else
-      all
+  def self.search(text)
+    query = "%#{text}%"
+    if text.present?
+      return where("name ILIKE :text OR city ILIKE :text", text: query)
     end
   end
+
+  def check_phone_number
+    return if self.phone_number.blank?
+    unless self.phone_number.gsub(/\D/, "").length == 10
+      errors.add(:phone_number, " must be 10 digits")
+    end
+  end
+
 end
