@@ -1,13 +1,26 @@
+<<<<<<< HEAD
 <div class="container">
 <div class="row">
 <h1>Welcome to the Users Page</h1>
+=======
+<%if current_user.admin %>
+	<h1>Welcome, Admin</h1>
+<% else %>
+	<h1>Welcome to the Users Page</h1>
+<% end %>
+>>>>>>> 7f4a848f1e9fcb1f0b9609afcaa0e6bdb2e27116
 
 <% @users.each do |user| %>
 	<ul>
-		<li><%= link_to image_tag(user.profile_pic), user %> </li>
-		<li><%= user.first_name %></li>
-		<li><%= user.last_name %></li>
+		<li><%= link_to user.first_name, user %></li>
+		<li><%= link_to user.last_name, user %></li>
+		<li><%= link_to image_tag(user.profile_pic), user %></li>
 		<li><%= user.description %></li>
+
+	    <% if current_user.admin %>
+	      <%= button_to "Edit", edit_user_path(user), :method => :get %>
+	      <%= button_to "Delete", user, :method => :delete %>
+	    <% end %>
 	</ul>
 <% end %>
 </div>

@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
+
+gem 'geocoder'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -52,3 +54,5 @@ gem 'awesome_print', require: 'ap'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 gem 'faker'
+
+gem "twitter-bootstrap-rails"

@@ -1,6 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">Welcome, <%= @user.first_name %> <%= @user.last_name %>!</div>
+    <div class="col-sm-4">
+    Welcome, <%= @user.first_name %> <%= @user.last_name %>!
+    </div>
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
       <%= form_tag "/venues", :method => 'get' do %>
@@ -30,8 +32,10 @@
 
   <div class="row" id="buttons">
     <div class="col-sm-1"></div>
+    <% if current_user == @user || @user.admin %>
     <div class="col-sm-1"><%= button_to "Edit", edit_user_path(@user), :method => :get %></div>
     <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete %></div>
+    <% end %>
   </div>
   <div class="row">
     <div class="col-sm-12" id="user_description">Description: <%= @user.description %></div>
@@ -49,6 +53,7 @@
       <div>
     <% @user.venues.each do |v| %>
     <ul>
+<<<<<<< HEAD
       <li>
         <%= link_to v.name, "/venues/#{v.id}"  %>
       </li>
@@ -56,11 +61,21 @@
         <%= link_to v.city, "/venues/#{v.id}" %>
       </li>
       <li><%= link_to image_tag(v.profile_pic), "/venues/#{v.id}" %></li>
+=======
+      <li><%= link_to image_tag(v.profile_pic), "/venues/#{v.id}" %></li>
+      <li><%= link_to v.name, "/venues/#{v.id}" %></li>
+      <li><%= v.city %></li>
+>>>>>>> 7f4a848f1e9fcb1f0b9609afcaa0e6bdb2e27116
     </ul>
-
   <% end %>
   </div>
+<<<<<<< HEAD
     </div>
   </div>
 </div>
+=======
+    </div>
+    </div>
+  </div>
+>>>>>>> 7f4a848f1e9fcb1f0b9609afcaa0e6bdb2e27116
 </div>

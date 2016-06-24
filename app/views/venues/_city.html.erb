@@ -1,0 +1,10 @@
+<h2><%= @venue[0].city %></h2>
+
+<% @venue.each do |v| %>
+	<ul>
+		<li><%= v.name %></li>
+		<li><%= v.street_one %></li>
+		<li><%= v.street_two %></li>
+		<li><%= v.zipcode %></li>
+	</ul>
+<% end %>

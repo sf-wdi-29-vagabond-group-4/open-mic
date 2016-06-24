@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
   <!-- Link to Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <!-- Latest compiled and minified CSS -->
 <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+=======
+>>>>>>> 7f4a848f1e9fcb1f0b9609afcaa0e6bdb2e27116
 
+
+  <!-- Adds Google Maps API CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg&libraries=places"></script>
+
+
+  <title>Open Mic</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
+
   <%= render "header" %>
+
+  <%= bootstrap_flash %>
+
   <%= yield %>
+
   <%= render "footer" %>
+
 </body>
 </html>
-
