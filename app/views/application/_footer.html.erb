@@ -1,35 +1,12 @@
-<nav class="navbar navbar-default" id="footer">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Open Mic</a>
-
+<footer>
+  <div class="row">
+    <div class="col-sm-6">
+      <h4 style="text-align: center">
+        Open Mic World Tour &copy 2016</li>
+      </h4>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li>&copy 2016</li>
-        <li><a href="#">Links<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
-      <li>You are logged in <%= current_user.first_name %> </li>
-      <li><%= link_to "Sign Out", sessions_path, method: :delete %></li>
-    <% else %>
-      <li><%= link_to "Sign in", sign_in_path, method: :get%></li>
-      <li><%= link_to "Sign up", new_user_path, method: :get%></li>
-    <% end %>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    <div class="col-sm-6">
+      <h4 style="text-align: center"><%= link_to "GitHub Repository", 'https://github.com/sf-wdi-29-vagabond-group-4/open-mic', class: "github" %></h4>
+    </div>
+  </div>
+</footer>

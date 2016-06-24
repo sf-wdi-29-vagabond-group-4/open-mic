@@ -1,16 +1,12 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-    </div>
-    <div class="col-sm-4">
-      <h1>Add a Venue</h1>
-    </div>
-    <div class="col-sm-4"></div>
-  </div>
 
+  <div>
+    <h1>Add a New Venue</h1>
+  </div>
+  <div class="line"></div>
   <div class="row">
     <div class="col-sm-6">
-      <%= text_field :mapSearchBox, "pac_input", placeholder: "Search Box" %>
+      <%= text_field :mapSearchBox, "pac_input", placeholder: "Search Box", class: "form-control" %>
       <div id="mapVenue"></div>
     </div>
     <div class="col-sm-6">

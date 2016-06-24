@@ -55,10 +55,10 @@ ActiveRecord::Schema.define(version: 20160623184454) do
     t.string   "profile_pic"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.integer  "admin_id"
     t.float    "latitude"
     t.float    "longitude"
     t.text     "full_address"
+    t.integer  "admin_id"
   end
 
   create_table "visits", force: :cascade do |t|

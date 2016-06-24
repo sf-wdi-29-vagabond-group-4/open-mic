@@ -20,30 +20,39 @@ ul {
 }
 
 body {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
+.navbar-color {
+  background-color: #34495e !important;
+  color: white !important;
+  height: 55px !important;
+}
+
+.sign-in {
+  height: 560px;
+}
 .container {
   margin: 35px;
 }
 
-.col-sm-6 img {
+/*.col-sm-6 img {
   max-width: 500px;
-}
+}*/
 
-.btn.btn-danger {
+/*.btn.btn-danger {
   background-color: pink;
-}
+}*/
 
-.container-fluid {
+/*.container-fluid {
   background-color: #add8e6;
   color: white;
-}
+}*/
 
-a {
+/*a {
   background-color: #add8e6;
   color: white;
-}
+}*/
 
 #user_info {
   margin-bottom: 25px;
@@ -62,7 +71,7 @@ a {
 }
 
 #show_information {
-  border: 1px dashed black;
+  border: 2px solid gray;
 }
 
 #search_bar {
@@ -71,6 +80,7 @@ a {
 }
 
 #myCarousel {
+  margin-top: -22px;
   margin-bottom: 25px;
 }
 
@@ -86,12 +96,9 @@ a {
   margin-bottom: 25px;
 }
 
-/*#footer {
-  width: 100%;
-  position: absolute;
-  bottom:0;
-  left:0;
-}*/
+.boldh4 {
+  text-shadow: gray 1px -1px;
+}
 
 .short-page {
   height: 150px;
@@ -123,4 +130,80 @@ h2 {
 #mapVenue {
   width: 100%;
   height: 500px;
+}
+
+#mapAllVenues {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  margin-top: -22px;
+}
+
+.venueImg {
+  height: 350px;
+  width: 100%;
+  border: 3px solid gray;
+  border-radius: 7px;
+}
+
+.indexVenueImg {
+  height: 250px;
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.indexUserImg {
+  height: 300px;
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.profileImg {
+  height: 250px;
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 50%;
+  margin: 10px;
+}
+.showUserImg {
+  height: 160px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.line {
+  border-bottom: 2px solid gray;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.venueName {
+  text-shadow: gray 1px -1px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.github {
+  color: black !important;
+  background-color: white !important;
+}
+
+.userFirst {
+  text-shadow: gray 1px -1px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.userCity {
+
 }

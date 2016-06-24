@@ -1,33 +1,42 @@
-<div class="container">
-  <div class="row">
-    <div class><h1>Edit Page</h1></div>
-  </div>
 
-    <%= form_for @user do |f| %>
-    <div>
-      <%= f.text_field :profile_pic, placeholder: "Profile Photo" %>
+<div class="container">
+  <div>
+    <h1>Edit Profile</h1>
+  </div>
+  <div class="line"></div>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+
+    <%= form_for(@user) do |f| %>
+      <div class="form-group">
+          <%= f.text_field :profile_pic, placeholder: "Profile Photo", class: "form-control" %>
+      </div>
+      <div class="form-group">
+          <%= f.text_field :first_name, placeholder: "First Name", class: "form-control" %>
+      </div>
+      <div class="form-group">
+          <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %>
+      </div>
+      <div class="form-group">
+          <%= f.text_field :age, placeholder: "Age", class: "form-control" %>
+      </div>
+      <div class="form-group">
+          <%= f.email_field :email, placeholder: "Email", class: "form-control" %>
+      </div>
+      <div class="form-group">
+          <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :current_city, placeholder: "Current City", class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.text_area :description, placeholder: "Description", class: "form-control" %>
+      </div>
+      <div class="form-group"><%= f.submit "Save", class: "btn btn-danger form-control" %>
+      </div>
+      <% end %>
     </div>
-    <div>
-      <%= f.text_field :first_name, placeholder: "First Name" %>
-    </div>
-    <div>
-      <%= f.text_field :last_name, placeholder: "Last Name" %>
-    </div>
-    <div>
-      <%= f.text_field :age, placeholder: "Age" %>
-    </div>
-    <div>
-      <%= f.text_field :email, placeholder: "Email" %>
-    </div>
-    <div>
-      <%= f.password_field :password, placeholder: "Password" %>
-    </div>
-    <div>
-      <%= f.text_field :current_city, placeholder: "Current City" %>
-    </div>
-    <div>
-      <%= f.text_field :description, placeholder: "Description" %>
-    </div>
-    <%= f.submit "Edit" %>
-  <% end %>
+    <div class="col-sm-4"></div>
+  </div>
 </div>

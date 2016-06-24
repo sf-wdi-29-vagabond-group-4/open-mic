@@ -1,107 +1,118 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4"><%= @venue.name %></div>
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4" id="search_bar">Search Bar Goes Here</div>
-  </div>
-  <div class="row" id="venue_info">
-    <div class="col-sm-4">
-      <img src="<%= @venue.profile_pic %>" alt="venue profile pic">
+  <div class="row" id="venues">
+    <div class="col-lg-4" id="header-search" >
+      <%= button_to "Add New Venue", new_venue_path, :method => :get, class: "btn btn-info" %>
     </div>
-      <div class="col-sm-4">
-        <ul>
-          <li>Address: <%= @venue.street_one %></li>
-          <li> <%= @venue.street_two %></li>
-          <li>City: <%= @venue.city %></li>
-          <li>State: <%= @venue.state %></li>
-          <li>Zip: <%= @venue.zipcode %></li>
-          <li>Phone: <%= @venue.phone_number %></li>
-          <li>Email: <%= @venue.email %></li>
-        <li><%= button_to "Follow Venue", new_visit_path(@venue), :method => :post %></li>
-        </ul>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <div class="row">
+        <%= form_tag "/venues", :method => 'get' do %>
+        <div class="form-group col-sm-8"><%= text_field_tag :search, params[:search], class: "form-control" %></div>
+        <div class="form-group col-sm-4"><%= submit_tag "Search", :name => nil, class: "form-control" %></div>
+        <% end %>
       </div>
-    <div class="col-sm-4"></div>
+    </div>
+  </div>
+  <div>
+    <h1><%= @venue.name %></h1>
+  </div>
+  <div class="line"></div>
+  <div class="row" id="venue_info">
+    <div class="col-sm-6">
+      <img src="<%= @venue.profile_pic %>" alt="venue profile pic" class="venueImg">
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6" style="text-align: right">
+          <h4 class="boldh4">Address:<br><br>City:<br>State:<br>Zipcode:<br>Phone:<br>Website:<br></h4>
+        </div>
+        <div class="col-sm-6">
+
+            <h4><%= @venue.street_one %><br><%= @venue.street_two %><br><%= @venue.city %><br><%= @venue.state %><br><%= @venue.zipcode %><br><%= @venue.phone_number %><br><%= @venue.email %><br><br></h4>
+            <%= button_to "Follow Venue", new_visit_path(@venue), :method => :post, class: "btn btn-danger" %>
+
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="row" id="buttons">
     <div class="col-sm-1"></div>
-    <div class="col-sm-1">
-      <%= button_to "Edit", edit_venue_path, :method => :get %>
+    <div class="col-sm-2" style="border-right: 1px solid black">
+      <%= button_to "Edit", edit_venue_path(@venue), :method => :get, class: "btn btn-default" %>
     </div>
-    <div class="col-sm-1">
-      <%= button_to "Delete", @user, :method => :delete %></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2">
+      <%= button_to "Delete", @venue, :method => :delete, class: "btn btn-default" %></div>
   </div>
   <div class="row">
-    <div class="col-sm-12" id="user_description">Description: <%= @venue.description %></div>
+    <div class="col-sm-12" id="user_description"><b>Description:</b> <%= @venue.description %></div>
+  </div>
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#">Map</a></li>
+      <li role="presentation"><a href="#">Comments</a></li>
+      <li role="presentation"><a href="#">Followers</a></li>
+    </ul>
   </div>
 
   <div class="row" id="show_information">
-    <div class="col-sm-4">
-      <h3>Map</h3>
-      <p>IPhone chicharrones seitan hoodie, man braid master cleanse scenester swag. Four dollar toast flannel gentrify yr YOLO, jean shorts man bun VHS single-origin coffee craft beer bitters flexitarian bicycle rights ramps. Lomo occupy forage jean shorts butcher vegan. Austin migas tacos blog, paleo thundercats you probably haven't heard of them. Keffiyeh 8-bit pour-over chartreuse beard crucifix. Asymmetrical blue bottle venmo twee, messenger bag fap you probably haven't heard of them master cleanse before they sold out williamsburg. Godard chicharrones offal, iPhone microdosing paleo distillery swag yuccie occupy blog cardigan migas 8-bit butcher.</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Reviews</h3>
-       <p>Everyday carry chambray gochujang, occupy synth gastropub small batch. Portland asymmetrical literally, disrupt williamsburg farm-to-table dreamcatcher. Venmo street art next level austin. Slow-carb cardigan crucifix venmo, tote bag quinoa normcore green juice retro pinterest man braid messenger bag post-ironic. Heirloom photo booth vice, thundercats yuccie sustainable tilde deep v authentic salvia bushwick. Flexitarian authentic bushwick typewriter, fanny pack pickled kogi gochujang drinking vinegar chia mixtape ennui dreamcatcher literally umami. Church-key pork belly direct trade narwhal, try-hard 90's single-origin coffee chicharrones fashion axe squid.</p>
-    </div>
-    <div class="col-sm-4">
-       <h3>Followers</h3>
-       <p>IPhone chicharrones seitan hoodie, man braid master cleanse scenester swag. Four dollar toast flannel gentrify yr YOLO, jean shorts man bun VHS single-origin coffee craft beer bitters flexitarian bicycle rights ramps. Lomo occupy forage jean shorts butcher vegan. Austin migas tacos blog, paleo thundercats you probably haven't heard of them. Keffiyeh 8-bit pour-over chartreuse beard crucifix. Asymmetrical blue bottle venmo twee, messenger bag fap you probably haven't heard of them master cleanse before they sold out williamsburg. Godard chicharrones offal, iPhone microdosing paleo distillery swag yuccie occupy blog cardigan migas 8-bit butcher.</p>
-    </div>
+    <div class="col-sm-12">
+        <div id="map"></div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-<h3>Comments</h3>
-<hr>
-<div>
-  <p>Post Comment:</p>
-
-  <%= form_for [@venue, Comment.new] do |form| %>
-    <div class="form-group"><%= form.text_area :comment, class: "form-control" %> </div>
-    <div class="form-group"><%= form.submit "Post", class: "btn btn-default form-control"%></div>
-  <% end %>
-
-<div class="comments">
-  <% @comments.each do |c| %>
-    <hr>
-    <big><p><%= c.comment %></p></big>
-    <h5>-<%= c.user.first_name %></h5>
-    <h6 class="media-heading"><i class="fa fa-clock-o"></i> <%= c.created_at.localtime.strftime('%I:%M%p %a %b %d, %Y') %></h6>
-    
-    <% if current_user.admin %>
-          <%= button_to "Edit", "/venues/:venue_id/comments/:id/edit", :method => :get %>
-          <%= button_to "Delete", "/venues/:venue_id/comments/:id", :method => :delete %>
-        <% end %>
-  <% end %>
-</div>
-
-<br>
-<h3>Followers</h3>
-<hr>
-<% @venue.users.each do |u| %>
-<ul>
-  <li><%= link_to u.first_name, "/users/#{u.id}"  %></li>
-  <li><%= link_to image_tag(u.profile_pic), "/users/#{u.id}" %></li>
-<% end %>
-
 
 <div class="container">
+  <div>
+    <h1>Comments</h1>
+  </div>
+  <div class="line"></div>
   <div class="row">
-    <div class="col s9">
-      <div id="map"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-8">
+      <p>Post Comment:</p>
+
+      <%= form_for [@venue, Comment.new] do |form| %>
+        <div class="form-group"><%= form.text_area :comment, class: "form-control" %> </div>
+        <div class="form-group"><%= form.submit "Post", class: "btn btn-default form-control"%></div>
+      <% end %>
+
+      <div class="comments">
+        <% @comments.each do |c| %>
+        <hr>
+        <big><p><%= c.comment %></p></big>
+        <h5><%= c.user.first_name %></h5>
+        <h6 class="media-heading"><i class="fa fa-clock-o"></i> <%= c.created_at.localtime.strftime('%I:%M%p %a %b %d, %Y') %></h6>
+
+        <% if current_user.admin %>
+        <%= button_to "Edit", "/venues/:venue_id/comments/:id/edit", :method => :get %>
+        <%= button_to "Delete", "/venues/:venue_id/comments/:id", :method => :delete %>
+        <% end %>
+        <% end %>
+      </div>
     </div>
+    <div class="col-sm-1"></div>
+  </div>
+
+
+  <div class="container">
+    <div>
+      <h1>Followers</h1>
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <div class="row">
+    <% @venue.users.each do |user| %>
+      <div class="col-sm-2">
+        <a href='/users/<%= user.id %>'><img src="<%= user.profile_pic %>" class="showUserImg" ></a>
+        <a href="/users/<%= user.id %>"><h4 style="text-align: center"><%= user.first_name %></h4></a>
+      </div>
+    <% end %>
   </div>
 </div>
-
 
 <script type="text/javascript">
   venueMap(<%= @venue.latitude %>, <%= @venue.longitude %>)
 </script>
-

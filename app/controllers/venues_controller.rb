@@ -3,9 +3,9 @@ class VenuesController < ApplicationController
 
   def index
     if params[:search] != nil
-      @venues = Venue.search(params[:search])
+      @venues = Venue.search(params[:search]).order(id: :desc)
     else
-      @venues = Venue.all.order(city: :desc)
+      @venues = Venue.all.order(id: :desc)
     end
     render :index
   end
