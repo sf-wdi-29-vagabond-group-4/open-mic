@@ -76,7 +76,7 @@
     <h6 class="media-heading"><i class="fa fa-clock-o"></i> <%= c.created_at.localtime.strftime('%I:%M%p %a %b %d, %Y') %></h6>
     
     <% if current_user.admin %>
-          <%= button_to "Edit", "/venues/:venue_id/comments/:id/edit", :method => :get %>
+          <%= button_to "Edit", "/venues/#{c.venue.id}/comments/#{c.id}/edit", :method => :get %>
           <%= button_to "Delete", "/venues/#{c.venue.id}/comments/#{c.id}", :method => :delete %>
         <% end %>
   <% end %>
