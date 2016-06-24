@@ -1,22 +1,16 @@
 <div class="container">
+  
   <div class="row">
-    <div class="col-sm-4">
-    Welcome, <%= @user.first_name %> <%= @user.last_name %>!
-    </div>
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4">
-      <%= form_tag "/venues", :method => 'get' do %>
-      <div class="form-group searchButton">
-          <%= text_field_tag :search, params[:search], class: "form-control" %>
-          <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
-      </div>
-      <% end %>
-  </div>
-  <div class="row" id="user_info">
-    <div class="col-sm-4">
+    <div class="col-md-6">
+      <%if current_user.admin %>
+        <h3>Welcome <%= current_user.first_name %></h3>
+        <h5>Admin</h5>
+      <%else%>
+        Welcome, <%= @user.first_name %> <%= @user.last_name %>!
+      <%end%>
       <img src="<%= @user.profile_pic %>" alt="user profile pic">
     </div>
-    <div class="col-sm-4">
+    <div class="col-md-6" id="user_info">
       <ul>
           <li>Current city: <%= @user.current_city %></li>
           <li>Join date: <%= @user.created_at.localtime.strftime('%a %b %d, %Y %I:%M%p') %></li>
@@ -24,8 +18,6 @@
           <li>Email: <%= @user.email %></li>
         </ul>
     </div>
-      <div class="col-sm-4">
-      </div>
   </div>
 
   <div class="row" id="buttons">

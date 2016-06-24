@@ -56,3 +56,4 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'faker'
 
 gem "twitter-bootstrap-rails"
+gem 'bootstrap-modal-rails', '~> 2.2', '>= 2.2.5'
