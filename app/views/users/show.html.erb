@@ -4,9 +4,11 @@
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
       <%= form_tag "/venues", :method => 'get' do %>
-      <div class="form-group searchButton">
-          <%= text_field_tag :search, params[:search], class: "form-control" %>
-          <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+      <div class="row">
+        <div class="form-group searchButton">
+            <div class="col-sm-6"><%= text_field_tag :search, params[:search], class: "form-control" %></div>
+            <div class="col-sm-6"><%= submit_tag "Search", :name => nil, class: "btn btn-default" %></div>
+        </div>
       </div>
       <% end %>
   </div>
