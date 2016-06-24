@@ -10,14 +10,15 @@
     </div>
       <div class="col-sm-4">
         <ul>
-  <li>Address: <%= @venue.street_one %></li>
-  <li> <%= @venue.street_two %></li>
-  <li>City: <%= @venue.city %></li>
-  <li>State: <%= @venue.state %></li>
-  <li>Zip: <%= @venue.zipcode %></li>
-  <li>Phone: <%= @venue.phone_number %></li>
-  <li>Email: <%= @venue.email %></li>
-</ul>
+          <li>Address: <%= @venue.street_one %></li>
+          <li> <%= @venue.street_two %></li>
+          <li>City: <%= @venue.city %></li>
+          <li>State: <%= @venue.state %></li>
+          <li>Zip: <%= @venue.zipcode %></li>
+          <li>Phone: <%= @venue.phone_number %></li>
+          <li>Email: <%= @venue.email %></li>
+        <li><%= button_to "Follow Venue", new_visit_path(@venue), :method => :post %></li>
+        </ul>
       </div>
     <div class="col-sm-4"></div>
   </div>
@@ -25,9 +26,10 @@
   <div class="row" id="buttons">
     <div class="col-sm-1"></div>
     <div class="col-sm-1">
-      <%= button_to "Edit", edit_user_path, :method => :get %>
+      <%= button_to "Edit", edit_venue_path, :method => :get %>
     </div>
-    <div class="col-sm-1"><%= button_to "Delete", @user, :method => :delete %></div>
+    <div class="col-sm-1">
+      <%= button_to "Delete", @user, :method => :delete %></div>
   </div>
   <div class="row">
     <div class="col-sm-12" id="user_description">Description: <%= @venue.description %></div>
@@ -56,40 +58,15 @@
 
 
 
-<h1> <%= @venue.name %></h1>
-<% if current_user != nil %>
-<% end %>
-
-<ul>
-  <li> <%= @venue.street_one %></li>
-  <li> <%= @venue.street_two %></li>
-  <li> <%= @venue.city %></li>
-  <li> <%= @venue.state %></li>
-  <li> <%= @venue.zipcode %></li>
-  <li> <%= @venue.phone_number %></li>
-  <li> <%= @venue.email %></li>
-  <li> <%= @venue.description %></li>
-  <li> <%= image_tag @venue.profile_pic %></li>
-</ul>
-<%= button_to "Follow Venue", new_visit_path(@venue), :method => :post %>
-
-<%= button_to "Edit", edit_venue_path(@venue), :method => :get %>
-<% if @current_user_id == @venue.admin_id %>
-  <%= button_to "Delete", @venue, :method => :delete %>
-<% end %>
-<br>
-
 <h3>Comments</h3>
 <hr>
 <div>
   <p>Post Comment:</p>
-  <form role="form" action="/venues/<%= @venue.id %>/comments" method="post">
-    <div class="form-group">
-      <textarea class="form-control" name="comment[comment]" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-default">Post</button>
-  </form>
-</div>
+
+  <%= form_for [@venue, Comment.new] do |form| %>
+    <div class="form-group"><%= form.text_area :comment, class: "form-control" %> </div>
+    <div class="form-group"><%= form.submit "Post", class: "btn btn-default form-control"%></div>
+  <% end %>
 
 <div class="comments">
   <% @comments.each do |c| %>
