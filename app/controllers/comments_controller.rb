@@ -8,6 +8,18 @@ class CommentsController < VenuesController
     redirect_to @venue   
   end
 
+  def edit
+    @comment = Comment.find(params[:id])
+    render :edit
+  end
+
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to venue_path(params[:venue_id])
+  end
+
 
 
   def comment_params

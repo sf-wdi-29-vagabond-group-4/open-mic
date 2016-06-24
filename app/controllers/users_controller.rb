@@ -60,9 +60,13 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    session.delete(:user_id)
     @user.destroy
+    if @user.admin
+      redirect_to @user
+    else
+    session.delete(:user_id)
     redirect_to "/"
+    end
   end
 
   private

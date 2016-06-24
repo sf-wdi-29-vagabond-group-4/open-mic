@@ -29,7 +29,7 @@
       <%= button_to "Edit", edit_venue_path, :method => :get %>
     </div>
     <div class="col-sm-1">
-      <%= button_to "Delete", @user, :method => :delete %></div>
+      <%= button_to "Delete", @venue, :method => :delete %></div>
   </div>
   <div class="row">
     <div class="col-sm-12" id="user_description">Description: <%= @venue.description %></div>
@@ -77,7 +77,7 @@
     
     <% if current_user.admin %>
           <%= button_to "Edit", "/venues/:venue_id/comments/:id/edit", :method => :get %>
-          <%= button_to "Delete", "/venues/:venue_id/comments/:id", :method => :delete %>
+          <%= button_to "Delete", "/venues/#{c.venue.id}/comments/#{c.id}", :method => :delete %>
         <% end %>
   <% end %>
 </div>
