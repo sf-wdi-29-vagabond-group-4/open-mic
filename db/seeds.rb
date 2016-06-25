@@ -11,7 +11,7 @@ require "./app/models/venue"
 require "faker"
 
 
-Venue.destroy_all
+# Venue.destroy_all
 # User.destroy_all
 10.times do
   v = Venue.new
