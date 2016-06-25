@@ -1,4 +1,4 @@
-<%= form_for @comment, url: "/venues/#{@comment.venue.id}/comments/#{@comment.id}" do |f| %>
-  <%= f.text_area :comment %>
-  <%= button_to "Post", "/venues/:venue_id/comments/:id", :method => :patch %>
-<% end %>
+  <%= form_for @comment, url: "/venues/#{@comment.venue.id}/comments/#{@comment.id}" do |f| %>
+    <%= f.text_area :comment %>
+    <%= button_to "Post", "/venues/:venue_id/comments/:id", :method => :patch %>
+  <% end %>
